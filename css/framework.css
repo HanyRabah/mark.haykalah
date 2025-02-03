@@ -1,0 +1,42 @@
+
+/*Fixed Elements */
+.m-black-btn {
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);
+    background: var(--black-color);
+    box-shadow: 0px 11.735px 21.664px 0px rgba(255, 255, 255, 0.24);
+    color: var(--white-color);
+    padding: 14.443px 28.885px;
+    transition: .5s;
+  }
+  .m-black-btn:hover {
+    border-radius: 4px;
+    border: 2px solid var(--Primary-5, #FBFCFE);
+    background: var(--Primary-5, #FBFCFE);
+    color: var(--black-color);
+  }
+  .m-white-btn {
+    border-radius: 4px;
+    border: 2px solid var(--white-color);
+    background: var(--white-color);
+    color: var(--black-color);
+    box-shadow: 0px 11.735px 21.664px 0px rgba(255, 255, 255, 0.24);
+    padding: 14.443px 28.885px;
+    transition: .5s;
+  }
+  .m-white-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  /* font colors  */
+  .m-txt-primary {
+    color: var(--primary-color);
+  }
+  .m-txt-white {
+    color: var(--white-color);
+  }
+  
+  .m-bg-primary {
+    background-color: var(--primary-color);
+  }
+  
