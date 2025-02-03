@@ -1249,7 +1249,6 @@ body {
   height: 80px;
 }
 
-
 /* NextDigital Hero section  */
 .nextdigital-hero {
   padding: 100px 0;
@@ -1537,35 +1536,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* start extra services section  */
 .extra-services {
   background : url(../img/nextdigital/extra-services-bg.png) no-repeat center center/cover;
@@ -1737,9 +1707,6 @@ body {
   max-width: 70% !important;
 }
 
-
-
-
 /* Responsive Adjustments */
 @media (max-width: 991px) {
   .right-col {
@@ -1748,7 +1715,123 @@ body {
 }
 
 
+/* NextDigital Page Responsive  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nextdigital-hero .overlay {
+    padding: 50px;
+  }
+  .nextdigital-hero .content {
+    padding: 20px 0px;
+    max-width: 100%;
+  }
+  .nextdigital-hero h3 {
+    font-size: 1.6rem;
+  }
+  .nextdigital-hero .content .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  /* why next digital  */
+  .why-nextdigital p {
+    font-size: 1.2rem;
+  }
+  .card-statistics .card-body h3 {
+    font-size: 1.5rem !important;
+  }
+  .card-statistics .card-body p {
+    font-size: 1rem !important;
+  }
+  .next-services p {
+    font-size: 20px;
+  }
+  .extra-services img {
+    width: auto;
+    height: 60%;
+  }
+  .extra-services .extra-cta {
+    padding-top: 0px !important;
+  }
+  .features-section .feature-box img {
+    width: auto;
+    height: auto;
+    max-width: 170%;
+  }
+  .packages .card {
+    margin-bottom: 1rem;
+    border-radius: 16px;
+  }
+  .next-contact-us .form-wrapper {
+    padding: 1rem .5rem;
+  }
+  .next-contact-us .form-wrapper h2 {
+    font-size: 22px;
+  }
+  .next-contact-us .form-wrapper h2 img {
+    height: 30px;
+  }
+  .next-contact-us .next-contact-info {
+    gap: .5rem !important;
+  }
+  .next-contact-us .contact-item p {
+    font-size: 12px;
+  }
+  .right-col img {
+    max-width: 50% !important;
+  }
+}
 
+@media (max-width: 767.98px) {
+  .nextdigital-hero .overlay {
+    padding: 40px;
+  }
+  .nextdigital-hero .content {
+    padding: 10px;
+    max-width: 100%;
+  }
+  .nextdigital-hero h3 {
+    font-size: 1.5rem;
+  }
+  .nextdigital-hero .content .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .why-nextdigital h2 {
+    font-size: 1.8rem !important;
+  }
+  .why-nextdigital h2 img {
+    height: 30px;
+  }
+  .why-nextdigital p {
+    font-size: 1.2rem;
+  }
+  .extra-services img {
+    width: auto;
+    height: 48%;
+  }
+  .extra-services .extra-cta {
+    padding-top: 0px !important;
+  }
+  .packages .card {
+    margin-bottom: 1rem;
+    border-radius: 16px;
+  }
+  
+  .next-contact-us .form-wrapper h2 {
+    font-size: 22px;
+  }
+  .next-contact-us .form-wrapper h2 img {
+    height: 30px;
+  }
+  .next-contact-us .next-contact-info {
+    gap: .5rem !important;
+  }
+  .next-contact-us .contact-item p {
+    font-size: 12px;
+  }
+  .right-col img {
+    max-width: 50% !important;
+  }
+}
 
 
 
