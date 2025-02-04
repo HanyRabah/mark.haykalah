@@ -29,7 +29,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+  
+  <link rel="stylesheet" href="css/framework.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,7 +39,7 @@
   <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top ">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="img/nextdigital/nextdigital-logo.png" alt="Logo" >
+        <img src="img/logo.png" alt="Logo" height="50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -46,11 +47,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#why-nextdigital">Why Next</a></li>
-          <li class="nav-item"><a class="nav-link" href="#next-services">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#packages">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="why-mark.html">Why Mark ?</a></li>
+          <li class="nav-item custom-dropdown">
+            <a class="nav-link" href="services.html">Our Services</a>
+            <ul class="custom-dropdown-menu">
+              <li><a href="next-digital.html">Next Digital</a></li>
+              <li><a href="next-stratgy.html">Next Strategy</a></li>
+              <li><a href="next-quality.html">Next Quality</a></li>
+              <li><a href="next-ai.html">Next AI</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item">
-            <a class="nav-link text-success fw-bold" href="#next-contact">
+            <a class="nav-link text-success fw-bold" href="contact-us.html">
               <i class="fa-solid fa-phone"></i> Contact Us
             </a>
           </li>
@@ -59,14 +68,11 @@
     </div>
   </nav>
 
-  <div class="logo-mark-btn">
-    <a href="index.html"><img class="logo" src="img/logo.png" alt="Mark Logo"></a>
-  </div>
   
   <!-- start nextdigital hero section  -->
-  <section class="nextdigital-hero">
+  <!-- <section class="nextdigital-hero">
     <div class="container">
-      <h2 class="text-capitalize fw-bold">The <img src="img/nextdigital/next.svg" alt="next" /> is digital</h2>
+      <h2 class="text-capitalize fw-bold">The <img src="img/next/next.svg" alt="next" /> is digital</h2>
       <div class="row">
         <div class="col">
           <div class="overlay">
@@ -82,13 +88,66 @@
         </div>
       </div>
     </div>
+  </section> -->
+
+  <section class="next-hero">
+    <div class="overlay">
+      <div class="container">
+        <div class="content">
+          <h2 class="text-capitalize fw-bold"> <img src="img/next/next-digital.svg" alt="next" /> </h2>
+          <h3>Digital Transformation: 
+            Amplify Your Visibility. Grow Your Business.</h3>
+          <p>Effective digital solutions tailored for industrial factories in Saudi Arabia.</p>
+          <div class="d-flex gap-3 py-3">
+            <a href="#next-contact" class="btn m-black-btn">Request A Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start features section Services Logos -->
+  <section class="features-section py-4">
+    <div class="container">
+      <div class="row justify-content-center text-center g-4 feats-row">
+        <div class="col-6 col-md-3 col-sm-6">
+          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
+            <!-- <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i> -->
+            <img src="img/next/creativity/Nextdigitalactive.svg" alt="Digital" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-sm-6">
+          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
+            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
+            <img src="img/next/creativity/nextstrategy.svg" alt="Strategy" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-sm-6">
+          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
+            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
+            <img src="img/next/creativity/Nextquality.svg" alt="Quality" class="img-fluid">
+          </div>
+        </div>
+        
+        
+        <div class="col-6 col-md-3 col-sm-6">
+          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
+            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
+            <img src="img/next/creativity/Nextai.svg" alt="AI" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- start why NextDigital  -->
   <section class="why-nextdigital py-5" id="why-nextdigital">
     <div class="container">
-      <h2 class="text-capitalize fw-bold text-white py-5">Why choose <img src="img/nextdigital/nextdigital-heading.svg"
-          alt="next" /> ?</h2>
+      <h2 class="text-capitalize fw-bold text-white py-5 next-sec-heading">
+        Why choose <img class="next-sec-heading-img" src="img/next/next-digital.svg" alt="next" /> ?
+      </h2>
       <div class="row">
         <div class="col">
           <p>As a Saudi-based company, we take pride in championing local talent with global exposure and expertise.</p>
@@ -125,9 +184,9 @@
     <div class="container text-center">
       <h2 class="text-capitalize fw-bold text-white py-5">Our reach across Saudi Arabia Industrial zone (Modon)</h2>
       <div class="row">
-        <div class="offset-sm-1 col-sm-auto">
+        <div class="offset-sm-1 offset-md-3 col-sm-auto">
           <div class="mb-5">
-            <img src="img/nextdigital/saudi-places.png" class="card-img-top" alt="Riyadh">
+            <img src="img/next/saudi-places.png" class="card-img-top" alt="Riyadh">
           </div>
         </div>
       </div>
@@ -178,7 +237,9 @@
   <!-- start next services section -->
   <section class="next-services py-5" id="next-services">
     <div class="container">
-      <h2 class="m-txt-primary fw-bold pt-5"><img src="img/nextdigital/next.svg" alt="next" /> Services</h2>
+      <h2 class="m-txt-primary fw-bold pt-5 next-sec-heading">
+        <img class="next-sec-heading-img" src="img/next/next-digital.svg" alt="next" /> Services
+      </h2>
       <p class="m-txt-white mb-5">Comprehensive Solutions for Your Business</p>
       <div class="row">
         <div class="accordion">
@@ -186,7 +247,7 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div class="title">
-                <img src="img/nextdigital/trademark-service.svg" alt="Trademark">
+                <img src="img/next/trademark-service.svg" alt="Trademark">
                 Trademark Registration
               </div>
               <span></span>
@@ -200,7 +261,7 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div class="title">
-                <img src="img/nextdigital/digital-service.svg" alt="Digital">
+                <img src="img/next/digital-service.svg" alt="Digital">
                 Digital Presence Essentials
               </div>
               <span></span>
@@ -234,7 +295,7 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div class="title">
-                <img src="img/nextdigital/digital-visibility.svg" alt="Marketing">
+                <img src="img/next/digital-visibility.svg" alt="Marketing">
                 Digital Marketing And Visibility
               </div>
               <span></span>
@@ -264,7 +325,7 @@
           <div class="accordion-item">
             <div class="accordion-header">
               <div class="title">
-                <img src="img/nextdigital/branding.svg" alt="Branding">
+                <img src="img/next/branding.svg" alt="Branding">
                 Branding & Identity
               </div>
               <span></span>
@@ -314,44 +375,12 @@
       <p>list of extra service to have within</p>
       <div class="row">
         <div class="col">
-          <img src="img/nextdigital/extra-services.png" alt="extra-services.png">
+          <img src="img/next/extra-services.png" alt="extra-services.png">
         </div>
         <div class="col py-5 extra-cta">
           <div class="d-flex gap-3 py-3 justify-content-center">
             <a href="#next-contact" class="btn m-black-btn">Contact Us to Customize Your Package</a>
             <!-- <a href="#" class="btn m-white-btn ">Get in touch</a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- start features section  -->
-  <section class="features-section py-4">
-    <div class="container">
-      <div class="row justify-content-center text-center g-4 feats-row">
-        <div class="col-6 col-md-3 col-sm-6">
-          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
-            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
-            <img src="img/nextdigital/creativity/nextquality.png" alt="Quality" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 col-sm-6">
-          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
-            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
-            <img src="img/nextdigital/creativity/nextpeople.png" alt="People" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 col-sm-6">
-          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
-            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
-            <img src="img/nextdigital/creativity/nextstrategy.png" alt="Strategy" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-6 col-md-3 col-sm-6">
-          <div class="feature-box d-flex align-items-center justify-content-center gap-4">
-            <i class="fa-solid fa-certificate fs-3 m-txt-primary"></i>
-            <img src="img/nextdigital/creativity/nextai.png" alt="AI" class="img-fluid">
           </div>
         </div>
       </div>
@@ -1267,84 +1296,65 @@
 
 
   <!-- start digital contact us  -->
-
-  <section id="next-contact" class="next-contact-us position-relative">
-    <!-- Background SVG -->
-    <div class="sec-bg position-absolute w-100 h-100 top-0 start-0 z-n1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 921"
-        preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="paint0_linear_485_3672" x1="720" y1="20.0894" x2="720" y2="892.089"
-            gradientUnits="userSpaceOnUse">
-            <stop stop-color="#373737" />
-            <stop offset="1" stop-color="#9D9D9D" />
-          </linearGradient>
-        </defs>
-        <rect width="1440" height="921" fill="url(#paint0_linear_485_3672)" />
-      </svg>
-    </div>
-
-    <div class="d-flex align-items-center justify-content-between">
-      <!-- Left Column (Form Section) -->
-      <div class="col-md-7 col-sm-12">
-        <div class="form-wrapper mt-sm-2 mb-sm-2">
-          <h2 class="">
-            Let’s Take Your Business to the
-            <img src="img/nextdigital/nextdigital-heading.svg" alt="next" />
-            Services
-          </h2>
-
-          <!-- Contact Form -->
-          <form action="">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name *" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email *" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Phone *" required>
-            </div>
-            <div class="mb-3">
-              <select class="form-select">
-                <option value="">Package Interest</option>
-                <option value="digital-one">Digital One</option>
-                <option value="digital-two">Digital Two</option>
-                <option value="digital-three">Digital Three</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-light w-100 text-dark fw-bold">SEND MESSAGE</button>
-          </form>
-
-          <!-- Contact Info -->
-          <div class="next-contact-info mt-4 d-flex justify-content-between gap-3">
-            <div class="contact-item d-flex align-items-center mb-2">
-              <i class="fas fa-phone-alt me-2"></i>
-              <p class="m-0"> PHONE <br>
-                <a href="tel:03 5432 1234">03 5432 1234</a>
-              </p>
-            </div>
-            <div class="contact-item d-flex align-items-center mb-2">
-              <i class="fas fa-envelope me-2"></i>
-              <p class="m-0"> EMAIL <br>
-                <a href="mailto:info@marcc.com.au" >info@marcc.com.au</a>
-              </p>
-            </div>
-            <div class="contact-item d-flex align-items-center">
-              <i class="fas fa-map-marker-alt me-2"></i>
-              <p class="m-0"><a href="#">6988 Abo AlAbas ben AbdulMotaleb P.O. Box 122169 Jeddah, 21332 Saudi Arabia</a></p>
+  <section id="next-contact" class="next-contact-us">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="form-wrapper mt-sm-2 mb-sm-2">
+              <h2 class="next-sec-heading">
+                Let’s Take Your Business to the
+                <img class="next-sec-heading-img" src="img/next/next-digital.svg" alt="next" />
+                Services
+              </h2>
+    
+              <!-- Contact Form -->
+              <form action="">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Name *" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Email *" required>
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Phone *" required>
+                </div>
+                <div class="mb-3">
+                  <select class="form-select">
+                    <option value="">Package Interest</option>
+                    <option value="digital-one">Digital One</option>
+                    <option value="digital-two">Digital Two</option>
+                    <option value="digital-three">Digital Three</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-light w-100 text-dark fw-bold">SEND MESSAGE</button>
+              </form>
+    
+              <!-- Contact Info -->
+              <div class="next-contact-info mt-4 d-flex justify-content-between gap-3">
+                <div class="contact-item d-flex align-items-center mb-2">
+                  <i class="fas fa-phone-alt me-2"></i>
+                  <p class="m-0"> PHONE <br>
+                    <a href="tel:03 5432 1234">03 5432 1234</a>
+                  </p>
+                </div>
+                <div class="contact-item d-flex align-items-center mb-2">
+                  <i class="fas fa-envelope me-2"></i>
+                  <p class="m-0"> EMAIL <br>
+                    <a href="mailto:info@marcc.com.au" >info@marcc.com.au</a>
+                  </p>
+                </div>
+                <div class="contact-item d-flex align-items-center">
+                  <i class="fas fa-map-marker-alt me-2"></i>
+                  <p class="m-0"><a href="#">6988 Abo AlAbas ben AbdulMotaleb P.O. Box 122169 Jeddah, 21332 Saudi Arabia</a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Right Column (Background Image) -->
-      <div class="d-md-flex col-md-5 d-sm-none right-col">
-        <img src="img/nextdigital/nextdigital-contact-us.jpg" alt="Next Digital Contact" class="img-fluid">
-      </div>
     </div>
   </section>
-
 
   <!-- start footer  -->
   <footer id="landing-footer" class="footer text-light">
@@ -1352,19 +1362,20 @@
       <div class="row ">
         <!-- Column 1: Logo and Description -->
         <div class="col-md-3 mb-4">
-          <img src="img/nextdigital/nextdigital-logo.png" alt="Mark Haykalah Logo" class="mb-3 footer-logo" style="max-width: 150px;">
-          <p class="pe-4">NextDigital solution is carefully designed to break barriers in the market through a personal selling approach, affordable entry prices, and moderate subscription rates</p>
+          <img src="img/logo.png" alt="Mark Haykalah Logo" class="mb-3 footer-logo">
+          <p class="pe-4">Structured to partner with Manufacturers in KSA’s industrial zones, offering end-to-end solutions that drive growth and operational excellence.</p>
         </div>
 
 
-         <!-- column 2: Quick links  -->
-         <div class="col-md-3 col-sm-6 mb-4 ">
+        <!-- column 2: Quick links  -->
+        <div class="col-md-3 col-sm-6 mb-4 ">
           <h5 class="text-white fst-italic mb-3 fs-2 fw-bold f-heading">Quick Links</h5>
           <ul class="list-unstyled legal-links ps-1">
             <li class="mb-3"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-            <li class="mb-3"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
-            <li class="mb-3"><a href="services.html" class="text-light text-decoration-none">Our Services</a></li>
             <li class="mb-3"><a href="why-mark.html" class="text-light text-decoration-none">Why Mark ?</a></li>
+            <li class="mb-3"><a href="services.html" class="text-light text-decoration-none">Our Services</a></li>
+            <li class="mb-3"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+            <li class="mb-3"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
 
@@ -1422,7 +1433,6 @@
             </ul>
           </div>
         </div>
-
       </div>
       <div class="row">
         <div class="copyright m-auto text-center">
@@ -1435,7 +1445,7 @@
 
 
   <script src="js/jquery.1.8.3.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js.map"></script>
+  <!-- <script src="js/bootstrap.bundle.min.js.map"></script> -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>

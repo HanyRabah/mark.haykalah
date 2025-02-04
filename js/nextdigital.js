@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Counter Animation
     const counters = document.querySelectorAll(".counter");
     const speed = 100; // Lower = Faster
 
@@ -29,47 +30,165 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.5 });
 
     counters.forEach(counter => observer.observe(counter));
+
+    // Accordion (Services Section)
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        const content = item.querySelector('.accordion-content');
+
+        item.addEventListener('click', () => {
+            // Check if the item is already active
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.accordion-content').style.maxHeight = null;
+            });
+
+            // Toggle the clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px"; // Set height dynamically
+            }
+        });
+    });
+
+    // Benefits Section Slider
+    const slides = [
+        "Gain a clear roadmap for sustainable business growth.",
+        "Strengthen client relationships and boost retention rates.",
+        "Achieve long-term competitiveness in your industry.",
+        "Leverage data-driven strategies for effective decision-making.",
+        "Align your business operations with Saudi Vision 2030 for future."
+    ];
+
+    let currentIndex = 0;
+    const sliderText = document.getElementById("sliderText");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+
+    if (sliderText && nextBtn && prevBtn) {
+        const changeSlide = (direction) => {
+            // Fade out
+            sliderText.style.opacity = "0";
+            
+            setTimeout(() => {
+                // Change text after fade out
+                currentIndex = (currentIndex + direction + slides.length) % slides.length;
+                sliderText.textContent = slides[currentIndex];
+
+                // Fade in
+                sliderText.style.opacity = "1";
+            }, 300); // Delay to match CSS animation
+        };
+
+        nextBtn.addEventListener("click", () => changeSlide(1));
+        prevBtn.addEventListener("click", () => changeSlide(-1));
+    }
 });
 
 
-// Accordion , services section
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const counters = document.querySelectorAll(".counter");
+//     const speed = 100; // Lower = Faster
+
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const counter = entry.target;
+//                 const targetText = counter.getAttribute("data-target").trim();
+//                 const hasPlus = targetText.startsWith("+"); // Check if number has '+'
+//                 const target = parseInt(targetText.replace("+", ""), 10);
+//                 let count = 0;
+
+//                 const updateCount = () => {
+//                     const increment = target / speed;
+//                     if (count < target) {
+//                         count += increment;
+//                         counter.innerText = (hasPlus ? "+ " : "") + Math.ceil(count);
+//                         requestAnimationFrame(updateCount);
+//                     } else {
+//                         counter.innerText = (hasPlus ? "+ " : "") + target;
+//                     }
+//                 };
+
+//                 updateCount();
+//                 observer.unobserve(counter); // Stop observing once animation starts
+//             }
+//         });
+//     }, { threshold: 0.5 });
+
+//     counters.forEach(counter => observer.observe(counter));
+// });
+
+
+// // Accordion , services section
 // document.querySelectorAll('.accordion-item').forEach(item => {
+//     const content = item.querySelector('.accordion-content');
+
 //     item.addEventListener('click', () => {
-//         // Toggle Active Class
+//         // Check if the item is already active
 //         const isActive = item.classList.contains('active');
-//         document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-        
+
+//         // Close all items
+//         document.querySelectorAll('.accordion-item').forEach(i => {
+//             i.classList.remove('active');
+//             i.querySelector('.accordion-content').style.maxHeight = null;
+//         });
+
+//         // Toggle the clicked item
 //         if (!isActive) {
 //             item.classList.add('active');
-//         }
-
-//         // Toggle "+" and "X"
-//         document.querySelectorAll('.accordion-item span').forEach(span => span.textContent = "+");
-//         if (!isActive) {
-//             item.querySelector('.accordion-header span').textContent = "X";
+//             content.style.maxHeight = content.scrollHeight + "px"; // Set height dynamically
 //         }
 //     });
 // });
 
-document.querySelectorAll('.accordion-item').forEach(item => { 
-    const content = item.querySelector('.accordion-content');
 
-    item.addEventListener('click', () => {
-        // Check if the item is already active
-        const isActive = item.classList.contains('active');
+// // next strategy page , Benefits section slider
+// const slides = [
+//     "Gain a clear roadmap for sustainable business growth.",
+//     "Strengthen client relationships and boost retention rates.",
+//     "Achieve long-term competitiveness in your industry.",
+//     "Leverage data-driven strategies for effective decision-making.",
+//     "Align your business operations with Saudi Vision 2030 for future."
+// ];
 
-        // Close all items
-        document.querySelectorAll('.accordion-item').forEach(i => {
-            i.classList.remove('active');
-            i.querySelector('.accordion-content').style.maxHeight = null;
-        });
+// let currentIndex = 0;
+// const sliderText = document.getElementById("sliderText");
 
-        // Toggle the clicked item
-        if (!isActive) {
-            item.classList.add('active');
-            content.style.maxHeight = content.scrollHeight + "px"; // Set height dynamically
-        }
-    });
-});
+// document.getElementById("nextBtn").addEventListener("click", () => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     sliderText.textContent = slides[currentIndex];
+// });
+
+// document.getElementById("prevBtn").addEventListener("click", () => {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//     sliderText.textContent = slides[currentIndex];
+// });
+
+
+
 

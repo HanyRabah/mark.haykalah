@@ -1,10 +1,10 @@
-:root {
+/* :root {
   --primary-color: #23FFC6;
   --secondary-color: #0066FF;
   --secondary2-color: #F9A644;
   --black-color : #030303;
   --white-color: #FBFCFE;
-}
+} */
 
 body {
   font-family: "Montserrat", serif;
@@ -13,7 +13,7 @@ body {
 }
 
 /*Fixed Elements */
-.m-black-btn {
+/* .m-black-btn {
   border-radius: 4px;
   border: 2px solid var(--primary-color);
   background: var(--black-color);
@@ -41,7 +41,7 @@ body {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
-/* font colors  */
+ 
 .m-txt-primary {
   color: var(--primary-color);
 }
@@ -51,7 +51,7 @@ body {
 
 .m-bg-primary {
   background-color: var(--primary-color);
-}
+} */
 
 
 
@@ -103,6 +103,55 @@ body {
   background: rgba(0, 0, 0, 0.9);
   transition: background-color 0.3s ease;
 }
+
+/* Custom Dropdown Styling */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  min-width: 180px;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Show dropdown on hover */
+.custom-dropdown:hover .custom-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Links */
+.custom-dropdown-menu li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.custom-dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #FBFCFE;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+/* Hover Effect */
+.custom-dropdown-menu li a:hover {
+  background-color: var(--primary-color);
+  color: var(--black-color);
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar-expand-lg .navbar-nav {
     margin-left: 5rem;
@@ -297,10 +346,10 @@ body {
 }
 
 
-
+/* 
 /* 
   == start CTA section  
-*/
+  == i moved this style to framework.css file
 .cta-section {
   position: relative;
   background-image: url('../img/cta-img.jpg');
@@ -358,7 +407,7 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
+} */
 
 /* start section creativity  */
 .creativity {
@@ -1215,104 +1264,62 @@ body {
 /****************************************
 = NextDigital Page
 *******************************************/
-/* Basic styles for the button */
-.logo-mark-btn {
-  position: fixed;
-  left: 2px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #232B56;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
-  width: 50px;
-  height: 50px;
-  z-index: 1;
-}
-
-/* Initial state for the logo image (show only "M") */
-.logo-mark-btn .logo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hover state for full logo */
-.logo-mark-btn:hover {
-  width: 80px;
-  height: 80px;
-}
 
 /* NextDigital Hero section  */
-.nextdigital-hero {
-  padding: 100px 0;
+.next-hero {
+  /* padding: 100px 0 0; */
   text-align: center;
   margin: auto;
   position: relative;
+  background: url('../img/next/hero-img.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nextdigital-hero h2 {
+
+.next-hero .overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-hero .content {
+  position: relative;
+  color: var(--white-color);
+  text-align: left;
+  max-width: 80%;
+  z-index: 2;
+}
+.next-hero h2 {
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
   padding: 50px 0;
 }
-.nextdigital-hero h2 img {
+.next-hero h2 img {
   height: 50px;
   width: auto;
 }
-.nextdigital-hero h3 {
+.next-hero h3 {
   font-size: 2rem;
-
+  width: 50%;
 }
-.nextdigital-hero p {
+.next-hero p {
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 400;
 }
-.nextdigital-hero .overlay {
-  position: relative;
-  width: 100%;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('../img/nextdigital/nextdigital-hero-bg.jpg') no-repeat center center/cover;
-}
-.nextdigital-hero .overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-}
 
-.nextdigital-hero .content {
-  position: relative;
-  color: var(--white-color);
-  text-align: left;
-  max-width: 80%;
-  padding: 80px 50px;
-  z-index: 2;
-}
+
 
 /* start why-nextdigital section   */
-.why-nextdigital h2 {
-  font-size: 2.5rem;
-  font-size: 40px;
-}
-.why-nextdigital h2 img {
-  height: 50px;
-  width: auto;
-}
 .why-nextdigital p {
   font-size: 1.5rem;
   color: var(--white-color);
@@ -1330,107 +1337,9 @@ body {
   font-size: 1.8rem !important;
 }
 
-
-
-/* start Accordion Services section    */
-/* .next-services {
-  padding: 88px 0 !important;
-}
-.next-services h2 {
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-.next-services h2 img {
-  height: 50px;
-  width: auto;
-}
-.next-services p {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  text-transform: capitalize;
-}
-.accordion .accordion-item {
-  border-bottom: 1px solid #fff;
-  padding: 15px 0;
-  cursor: pointer;
-  background-color: #000;
-  margin-bottom: 20px;
-}
-
-.accordion-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 24px;
-  line-height: 140%;
-  text-transform: capitalize;
-  color: #fff;
-  margin-bottom: 10px !important;
-  padding-right: 5px !important;
-  transition: color 0.3s;
-}
-
-.accordion-header img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.accordion-header span {
-  transition: transform 0.3s, color 0.3s;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-  padding: 0px 15px;
-  font-size: 20px;
-  color: var(--white-color);
-}
-
-.accordion-item.active .accordion-content {
-  max-height: 100%;
-}
-
-.accordion-item.active .accordion-content p {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 120%;
-}
-.accordion-item.active .accordion-header span {
-  color: #0fd7b2;
-  content: "X";
-}
-
-.accordion-item.active .accordion-header {
-  color: #0fd7b2;
-} */
-
-
-
-
 /* Start Accordion Services section */
 .next-services {
   padding: 88px 0 !important;
-}
-
-.next-services h2 {
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.next-services h2 img {
-  height: 50px;
-  width: auto;
 }
 
 .next-services p {
@@ -1538,7 +1447,7 @@ body {
 
 /* start extra services section  */
 .extra-services {
-  background : url(../img/nextdigital/extra-services-bg.png) no-repeat center center/cover;
+  background : url(../img/next/extra-services-bg.png) no-repeat center center/cover;
   min-height: 600px;
   padding-top: 80px;
   color: var(--white-color);
@@ -1621,36 +1530,31 @@ body {
 .next-contact-us {
   position: relative;
   width: 100%;
+  height: 100%;
   overflow: hidden;
-  min-height: 600px; 
+  min-height: 600px;
+  background: url(../img/next/next-contact-bg.jpg) no-repeat center center/cover;
 }
-.next-contact-us .sec-bg {
-  z-index: -1;
-  position: absolute;
+.next-contact-us .overlay {
+  padding: 50px 0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-}
-
-.next-contact-us .container {
-  position: relative;
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.60);
 }
 .next-contact-us .form-wrapper {
   background: black;
   border-radius: 20px;
-  padding: 3rem;
+  padding: 4rem 2rem;
   color: white;
   width: 90%;
   margin: auto;
 }
 .next-contact-us .form-wrapper h2 {
-  font-size: 40px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-.next-contact-us .form-wrapper h2 img {
-  height: 50px;
-  width: auto;
-}
+
 .next-contact-us .form-wrapper form input,
 .next-contact-us .form-wrapper form select {
   background: #1A1A1A;
@@ -1697,37 +1601,90 @@ body {
   color: var(--primary-color);
 }
 
-.right-col {
-  /* background: url('../img/nextdigital/contact-digital-img.png') no-repeat center center/cover; */
-  height: 100%;
-  min-height: 600px;
-  width: auto;
-}
-.right-col img {
-  max-width: 70% !important;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-  .right-col {
-      min-height: 300px;
-  }
-}
 
 
-/* NextDigital Page Responsive  */
+
+/* start next-strategy  Page*/
+.next-strategy {
+  background: url(../img/next/strategy/hero.jpg) no-repeat center center/cover;
+}
+
+/* Startegy CTA section  */
+.strategy-cta {
+  background: url(../img/next/strategy/stratgy-cta-bg.png) no-repeat center center/cover;
+}
+
+/* Benefits section slider */
+.benefits .slider-benefits {
+  display: flex;
+  align-items: center;
+  /* height: 70vh; */
+}
+.benefits .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+.benefits .left-column h2 {
+  color: #00ffcc;
+  font-weight: bold;
+}
+.benefits .slider-text {
+  font-size: 1.25rem;
+  min-height: 80px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.benefits .arrows {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+.benefits .arrow-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.benefits .arrow-btn:hover {
+  background: white;
+  color: black;
+}
+.benefits .image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* start next-quality page  */
+.next-quality {
+  background: url(../img/next/quality/hero.jpg) no-repeat center center/cover;
+}
+
+
+/* Next Pages Responsive  */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .nextdigital-hero .overlay {
+  .next-hero .overlay {
     padding: 50px;
   }
-  .nextdigital-hero .content {
+  .next-hero .content {
     padding: 20px 0px;
     max-width: 100%;
   }
-  .nextdigital-hero h3 {
+  .next-hero h3 {
     font-size: 1.6rem;
+    width: 80%;
   }
-  .nextdigital-hero .content .btn {
+  .next-hero .content .btn {
     padding: 10px 20px;
     font-size: 14px;
   }
@@ -1781,17 +1738,18 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  .nextdigital-hero .overlay {
+  .next-hero .overlay {
     padding: 40px;
   }
-  .nextdigital-hero .content {
+  .next-hero .content {
     padding: 10px;
     max-width: 100%;
   }
-  .nextdigital-hero h3 {
+  .next-hero h3 {
     font-size: 1.5rem;
+    width: 100%;
   }
-  .nextdigital-hero .content .btn {
+  .next-hero .content .btn {
     padding: 8px 16px;
     font-size: 14px;
   }
@@ -1835,6 +1793,9 @@ body {
 
 
 
+/*****************************************************
+== Next Quality Page 
+*****************************************************/
 
 
 
@@ -1842,6 +1803,40 @@ body {
 
 
 
+
+/*****************************************************
+== Terms & Condtions - Privacy Policy
+*****************************************************/
+#privacy,
+#terms {
+  padding: 150px 0;
+}
+#terms .text-block p {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+#terms .text-block ul {
+  padding: 20px 25px;
+}
+#terms .text-block ul li {
+  margin-bottom: 10px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+
+
+#privacy .text-block p {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+#privacy .text-block ul {
+  padding: 20px 25px;
+}
+#privacy .text-block ul li {
+  margin-bottom: 10px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
 
 
 

@@ -445,7 +445,29 @@ function onlyOne(checkbox) {
 
 
 
-// About us page
+
+
+// Next PAge 
+// document.querySelectorAll('.accordion-item').forEach(item => { 
+//   const content = item.querySelector('.accordion-content');
+
+//   item.addEventListener('click', () => {
+//       // Check if the item is already active
+//       const isActive = item.classList.contains('active');
+
+//       // Close all items
+//       document.querySelectorAll('.accordion-item').forEach(i => {
+//           i.classList.remove('active');
+//           i.querySelector('.accordion-content').style.maxHeight = null;
+//       });
+
+//       // Toggle the clicked item
+//       if (!isActive) {
+//           item.classList.add('active');
+//           content.style.maxHeight = content.scrollHeight + "px"; // Set height dynamically
+//       }
+//   });
+// });
 
 
 

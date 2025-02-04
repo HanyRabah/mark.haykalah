@@ -29,13 +29,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <link rel="stylesheet" href="css/framework.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
   <!-- start navbar  -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top ">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="img/logo.png" alt="Logo" height="50">
@@ -47,11 +48,19 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="why-mark.html">Why Mark ?</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+          <li class="nav-item custom-dropdown">
+            <a class="nav-link" href="services.html">Our Services</a>
+            <ul class="custom-dropdown-menu">
+              <li><a href="next-digital.html">Next Digital</a></li>
+              <li><a href="next-stratgy.html">Next Strategy</a></li>
+              <li><a href="next-quality.html">Next Quality</a></li>
+              <li><a href="next-ai.html">Next AI</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item">
-            <a class="nav-link text-success fw-bold" href="#contact">
-              <i class="fa-solid fa-phone-volume"></i> Contact Us
+            <a class="nav-link text-success fw-bold" href="contact-us.html">
+              <i class="fa-solid fa-phone"></i> Contact Us
             </a>
           </li>
         </ul>
@@ -233,9 +242,22 @@
             </a>
           </div>
 
-    
           <div class="col-12">
-            <a href="#" class="service-action">
+            <a href="next-stratgy.html" class="service-action">
+              <div class="service-box d-flex justify-content-between align-items-center p-4">
+                <div class="service-content">
+                  <img src="img/services/nextstrategy.png" alt="NextStrategy" class="service-heading mb-2">
+                  <p class="m-txt-white">Review and build value propositions.</p>
+                </div>
+                <div class="d-flex services-btn">
+                  <a href="#" class="learn-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12">
+            <a href="next-quality.html" class="service-action">
               <div class="service-box d-flex justify-content-between align-items-center p-4">
                 <div class="service-content">
                   <img src="img/services/nextquality.png" alt="NextQuality" class="service-heading mb-2">
@@ -251,27 +273,13 @@
           </div>
 
           <div class="col-12">
-            <a href="#" class="service-action">
+            <a href="next-ai.html" class="service-action">
               <div class="service-box d-flex justify-content-between align-items-center p-4">
                 <div class="service-content">
                   <img src="img/services/nextai.png" alt="NextAi" class="service-heading mb-2 nextai">
                   <p class="m-txt-white">
                     A Business efficiency consultation and solutions powered by innovative and disruptive technology Improve operational and financial efficiency
                   </p>
-                </div>
-                <div class="d-flex services-btn">
-                  <a href="#" class="learn-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </a>
-          </div>
-          
-          <div class="col-12">
-            <a href="#" class="service-action">
-              <div class="service-box d-flex justify-content-between align-items-center p-4">
-                <div class="service-content">
-                  <img src="img/services/nextstrategy.png" alt="NextStrategy" class="service-heading mb-2">
-                  <p class="m-txt-white">Review and build value propositions.</p>
                 </div>
                 <div class="d-flex services-btn">
                   <a href="#" class="learn-more-button">Learn More <i class="fa-solid fa-arrow-right"></i></a>
@@ -582,9 +590,10 @@
           <h5 class="text-white fst-italic mb-3 fs-2 fw-bold f-heading">Quick Links</h5>
           <ul class="list-unstyled legal-links ps-1">
             <li class="mb-3"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-            <li class="mb-3"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
-            <li class="mb-3"><a href="services.html" class="text-light text-decoration-none">Our Services</a></li>
             <li class="mb-3"><a href="why-mark.html" class="text-light text-decoration-none">Why Mark ?</a></li>
+            <li class="mb-3"><a href="services.html" class="text-light text-decoration-none">Our Services</a></li>
+            <li class="mb-3"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+            <li class="mb-3"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
 
@@ -642,7 +651,6 @@
             </ul>
           </div>
         </div>
-
       </div>
       <div class="row">
         <div class="copyright m-auto text-center">
@@ -655,7 +663,7 @@
 
 
   <script src="js/jquery.1.8.3.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js.map"></script>
+  <!-- <script src="js/bootstrap.bundle.min.js.map"></script> -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>
