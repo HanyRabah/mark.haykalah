@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // horizontal scrolling effect
 const whyUsSection = document.querySelector('#why-us');
-const slidesContainer = document.querySelector('.slides-container');
+//const slidesContainer = document.querySelector('.slides-container');
 const slides = document.querySelectorAll('.slide');
 
 // Speed multiplier for horizontal scrolling
@@ -38,79 +38,36 @@ const observer = new IntersectionObserver(
 );
 
 // Start observing the slides-container
-observer.observe(slidesContainer);
+//observer.observe(slidesContainer);
 
-// Add wheel event to scroll slides horizontally
-whyUsSection.addEventListener('wheel', (event) => {
-  if (!isCentered) return; // Only allow scrolling when centered
+// // Add wheel event to scroll slides horizontally
+// whyUsSection.addEventListener('wheel', (event) => {
+//   if (!isCentered) return; // Only allow scrolling when centered
 
-  const atStart = slidesContainer.scrollLeft <= 0;
-  const atEnd = slidesContainer.scrollLeft + slidesContainer.clientWidth >= slidesContainer.scrollWidth - 1;
+//   const atStart = slidesContainer.scrollLeft <= 0;
+//   const atEnd = slidesContainer.scrollLeft + slidesContainer.clientWidth >= slidesContainer.scrollWidth - 1;
 
-  if (atStart && event.deltaY < 0) {
-    // Allow normal page scrolling when at the beginning and scrolling up
-    whyUsSection.removeEventListener('wheel', preventDefault);
-  } else if (atEnd && event.deltaY > 0) {
-    // Allow normal page scrolling when at the end and scrolling down
-    whyUsSection.removeEventListener('wheel', preventDefault);
-  } else {
-    // Prevent page scroll and allow horizontal slide scroll
-    event.preventDefault();
-    slidesContainer.scrollBy({
-      left: event.deltaY * scrollSpeedMultiplier,
-      behavior: 'smooth',
-    });
-    whyUsSection.addEventListener('wheel', preventDefault);
-  }
-});
+//   if (atStart && event.deltaY < 0) {
+//     // Allow normal page scrolling when at the beginning and scrolling up
+//     whyUsSection.removeEventListener('wheel', preventDefault);
+//   } else if (atEnd && event.deltaY > 0) {
+//     // Allow normal page scrolling when at the end and scrolling down
+//     whyUsSection.removeEventListener('wheel', preventDefault);
+//   } else {
+//     // Prevent page scroll and allow horizontal slide scroll
+//     event.preventDefault();
+//     slidesContainer.scrollBy({
+//       left: event.deltaY * scrollSpeedMultiplier,
+//       behavior: 'smooth',
+//     });
+//     whyUsSection.addEventListener('wheel', preventDefault);
+//   }
+// });
 
-// Prevent default scrolling
-function preventDefault(event) {
-  event.preventDefault();
-}
-
-// Click to scroll to specific slide
-function scrollToSlide(index) {
-  const slideWidth = slides[0].offsetWidth;
-  slidesContainer.scrollTo({
-    left: slideWidth * index,
-    behavior: 'smooth',
-  });
-}
-
-// Attach click event to each slide
-slides.forEach((slide, index) => {
-  slide.addEventListener('click', () => {
-    scrollToSlide(index);
-  });
-});
-
-// Touch swipe functionality
-let startX;
-whyUsSection.addEventListener('touchstart', (event) => {
-  startX = event.touches[0].clientX;
-});
-
-whyUsSection.addEventListener('touchend', (event) => {
-  const endX = event.changedTouches[0].clientX;
-  const deltaX = startX - endX;
-  const threshold = 50; // Minimum swipe distance
-
-  if (deltaX > threshold) {
-    // Swipe left (next slide)
-    slidesContainer.scrollBy({
-      left: slides[0].offsetWidth,
-      behavior: 'smooth',
-    });
-  } else if (deltaX < -threshold) {
-    // Swipe right (previous slide)
-    slidesContainer.scrollBy({
-      left: -slides[0].offsetWidth,
-      behavior: 'smooth',
-    });
-  }
-});
-
+// // Prevent default scrolling
+// function preventDefault(event) {
+//   event.preventDefault();
+// }
 
 
 
