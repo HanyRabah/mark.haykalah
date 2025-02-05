@@ -1272,10 +1272,11 @@ body {
   margin: auto;
   position: relative;
   background: url('../img/next/hero-img.png') no-repeat center center/cover;
-  height: 100vh;
+  height: calc(92vh - 120px);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 120px
 }
 
 .next-hero .overlay {
@@ -1668,6 +1669,12 @@ body {
 /* start next-quality page  */
 .next-quality {
   background: url(../img/next/quality/hero.jpg) no-repeat center center/cover;
+}
+
+
+/* start next-ai page  */
+.next-ai {
+  background: url(../img/next/ai/next-ai-hero.jpg) no-repeat center center/cover;
 }
 
 
