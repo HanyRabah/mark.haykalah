@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    # Deploy your Next.js application
+    - export DEPLOYPATH=/home4/haykalah/mark.haykalah.com/
+    #- /bin/rm -rf $DEPLOYPATH/* # Clear previous deployment
+    - /bin/cp -R * $DEPLOYPATH
+    # copy env production to .env
+    #- /bin/cp .env.production $DEPLOYPATH.env
