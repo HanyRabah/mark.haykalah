@@ -73,23 +73,26 @@ body {
   margin-right: 1rem;
 }
 .navbar .navbar-nav .nav-link {
-  padding: 0.5rem .25rem;
+  padding: 2px 10px;
   font-size: 1.1rem;
   font-weight: 600;
   color: #FBFCFE;
   transition: all 0.5s;
+border-radius: 4px;
+
 }
 
 .navbar .navbar-nav .nav-link:hover {
   background-color: var(--primary-color);
   color: var(--black-color);
-  border-radius: 0px;
+  border-radius: 4px;
 }
 .navbar .navbar-nav .nav-link.active {
   background-color: var(--primary-color);
   color: var(--black-color);
   border-radius: 0px;
   font-weight: 600;
+  border-radius: 4px;
 }
 .navbar .navbar-nav .nav-link.text-success {
   color: var(--primary-color) !important;
@@ -1344,11 +1347,8 @@ body {
 }
 
 .next-services p {
-  font-size: 24px;
   font-style: normal;
-  font-weight: 600;
   line-height: 100%;
-  text-transform: capitalize;
 }
 
 .accordion {
@@ -1425,23 +1425,23 @@ body {
 }
 
 .accordion-content {
+  font-weight: normal;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
-  padding: 0 15px;
+  transition: all 0.5s ease-in-out, opacity 0.3s ease-in-out;
   font-size: 20px;
   color: var(--white-color);
 }
 .accordion-item.active .accordion-content {
   /* max-height: 100%;  */
+  font-weight: normal;
   opacity: 1;
   padding: 15px 15px;
 }
 .accordion-item.active .accordion-content p {
   font-weight: normal;
   font-size: 20px;
-  line-height: 120%;
 }
 
 
