@@ -54,32 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Benefits Section Slider
-    const slides = [
-        "Gain a clear roadmap for sustainable business growth.",
-        "Strengthen client relationships and boost retention rates.",
-        "Achieve long-term competitiveness in your industry.",
-        "Leverage data-driven strategies for effective decision-making.",
-        "Align your business operations with Saudi Vision 2030 for future."
-    ];
-
-    let currentIndex = 0;
     const sliderText = document.getElementById("sliderText");
     const nextBtn = document.getElementById("nextBtn");
     const prevBtn = document.getElementById("prevBtn");
 
     if (sliderText && nextBtn && prevBtn) {
+        const slides = JSON.parse(sliderText.getAttribute("data-slides"));
+        let currentIndex = 0;
+
         const changeSlide = (direction) => {
-            // Fade out
             sliderText.style.opacity = "0";
             
             setTimeout(() => {
-                // Change text after fade out
                 currentIndex = (currentIndex + direction + slides.length) % slides.length;
                 sliderText.textContent = slides[currentIndex];
-
-                // Fade in
                 sliderText.style.opacity = "1";
-            }, 300); // Delay to match CSS animation
+            }, 300);
         };
 
         nextBtn.addEventListener("click", () => changeSlide(1));
