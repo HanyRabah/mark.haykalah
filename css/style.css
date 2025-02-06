@@ -1675,6 +1675,7 @@ body {
 }
 
 .next-contact-us .form-wrapper form input,
+.next-contact-us .form-wrapper form textarea,
 .next-contact-us .form-wrapper form select {
 	background: #1a1a1a;
 	border: 1px solid #e0e0e0;
@@ -1682,6 +1683,15 @@ body {
 	padding: 10px 20px;
 	margin-bottom: 1rem;
 	color: white;
+}
+.form-select {
+	background: #1a1a1a
+		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+		no-repeat right 0.75rem center/8px 10px !important;
+
+	color: white;
+	z-index: 10;
+	position: relative;
 }
 .next-contact-us .form-wrapper form button {
 	display: flex;
@@ -2009,4 +2019,278 @@ body {
 		margin-bottom: 1rem;
 		gap: 1rem !important;
 	}
+}
+
+/* bubble animations  */
+/* Floating animation keyframes */
+@keyframes rotate1 {
+	0% {
+		transform: rotate(-2deg);
+	}
+	50% {
+		transform: rotate(2deg);
+	}
+	100% {
+		transform: rotate(-2deg);
+	}
+}
+
+@keyframes rotate2 {
+	0% {
+		transform: rotate(1deg);
+	}
+	50% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(1deg);
+	}
+}
+
+@keyframes rotate3 {
+	0% {
+		transform: rotate(-1.5deg);
+	}
+	50% {
+		transform: rotate(1.5deg);
+	}
+	100% {
+		transform: rotate(-1.5deg);
+	}
+}
+
+/* Combined float and rotation keyframes */
+@keyframes floatRotate1 {
+	0% {
+		transform: translateY(0px) rotate(-15deg);
+	}
+	50% {
+		transform: translateY(-8px) rotate(10deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(-15deg);
+	}
+}
+
+@keyframes floatRotate2 {
+	0% {
+		transform: translateY(0px) rotate(5deg);
+	}
+	50% {
+		transform: translateY(-8px) rotate(-1deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(5deg);
+	}
+}
+
+@keyframes floatRotate3 {
+	0% {
+		transform: translateY(0px) rotate(-9deg);
+	}
+	50% {
+		transform: translateY(-8px) rotate(5deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(-9deg);
+	}
+}
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+/* Container for the bubbles */
+.bubble-container {
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Positioning classes for bubbles */
+.bubble-pos-1 {
+	top: 15%;
+	left: 10%;
+}
+.bubble-pos-2 {
+	top: 25%;
+	left: 30%;
+}
+.bubble-pos-3 {
+	top: 20%;
+	left: 50%;
+}
+.bubble-pos-4 {
+	top: 35%;
+	left: 70%;
+}
+.bubble-pos-5 {
+	top: 45%;
+	left: 40%;
+}
+.bubble-pos-6 {
+	top: 55%;
+	left: 60%;
+}
+.bubble-pos-7 {
+	top: 65%;
+	left: 25%;
+}
+.bubble-pos-8 {
+	top: 70%;
+	left: 80%;
+}
+.bubble-pos-9 {
+	top: 80%;
+	left: 45%;
+}
+
+/* Base bubble style */
+.bubble {
+	padding: 8px 20px;
+	border-radius: 50px;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	display: inline-block;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	white-space: nowrap;
+	position: absolute;
+	transform-origin: center;
+}
+
+/* Assign different animations to different bubbles */
+.bubble:nth-child(3n + 1) {
+	animation: floatRotate1 4s ease-in-out infinite;
+	animation-delay: 0s;
+}
+
+.bubble:nth-child(3n + 2) {
+	animation: floatRotate2 4.5s ease-in-out infinite;
+	animation-delay: -0.5s;
+}
+
+.bubble:nth-child(3n + 3) {
+	animation: floatRotate3 5s ease-in-out infinite;
+	animation-delay: -1s;
+}
+
+/* Dark bubble style */
+.bubble-dark {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Mint green bubble style */
+.bubble-mint {
+	background-color: #98ffd9;
+	color: #000;
+}
+
+/* Hover effects */
+.bubble:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bubble-dark:hover {
+	background-color: #444;
+}
+
+.bubble-mint:hover {
+	background-color: #7fffd4;
+}
+
+/* lamp animations  */
+
+/* Animation keyframes */
+@keyframes lampOff {
+	0%,
+	45% {
+		opacity: 1;
+	}
+	50%,
+	95% {
+		opacity: 0.2; /* Keep slightly visible instead of fully transparent */
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes lampOn {
+	0%,
+	45% {
+		opacity: 0;
+	}
+	50%,
+	95% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes glowCycle {
+	0%,
+	45% {
+		opacity: 0;
+	}
+	50%,
+	95% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.lamp-container {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 180px;
+	height: 180px;
+	animation: float 3s ease-in-out infinite;
+}
+
+.lamp {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lamp-off {
+	animation: lampOff 6s ease-in-out infinite;
+}
+
+.lamp-on {
+	animation: lampOn 6s ease-in-out infinite;
+}
+
+/* Glow effect */
+.lamp-glow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120%;
+	height: 120%;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+	animation: glowCycle 6s ease-in-out infinite;
+	pointer-events: none;
+	mix-blend-mode: screen; /* Makes the glow blend better */
 }
