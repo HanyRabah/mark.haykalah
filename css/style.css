@@ -483,10 +483,20 @@ body {
 
 /* start section creativity  */
 .creativity {
-	background-color: #000;
+	background-color: #111;
 	color: #fff;
 	overflow: hidden;
 	position: relative;
+}
+.creativity .slider-wrapper:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: linear-gradient(to right, #111, rgba(0, 128, 128, 0) 100px),
+		linear-gradient(to left, #111, rgba(0, 128, 128, 0) 100px);
 }
 
 .creativity .slider-wrapper {
