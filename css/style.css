@@ -1,57 +1,9 @@
-/* :root {
-  --primary-color: #23FFC6;
-  --secondary-color: #0066FF;
-  --secondary2-color: #F9A644;
-  --black-color : #030303;
-  --white-color: #FBFCFE;
-} */
-
 body {
 	font-family: "Montserrat", serif;
 	overflow-x: hidden;
 	background-color: #000;
+	box-sizing: border-box;
 }
-
-/*Fixed Elements */
-/* .m-black-btn {
-  border-radius: 4px;
-  border: 2px solid var(--primary-color);
-  background: var(--black-color);
-  box-shadow: 0px 11.735px 21.664px 0px rgba(255, 255, 255, 0.24);
-  color: var(--white-color);
-  padding: 14.443px 28.885px;
-  transition: .5s;
-}
-.m-black-btn:hover {
-  border-radius: 4px;
-  border: 2px solid var(--Primary-5, #FBFCFE);
-  background: var(--Primary-5, #FBFCFE);
-  color: var(--black-color);
-}
-.m-white-btn {
-  border-radius: 4px;
-  border: 2px solid var(--white-color);
-  background: var(--white-color);
-  color: var(--black-color);
-  box-shadow: 0px 11.735px 21.664px 0px rgba(255, 255, 255, 0.24);
-  padding: 14.443px 28.885px;
-  transition: .5s;
-}
-.m-white-btn:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
- 
-.m-txt-primary {
-  color: var(--primary-color);
-}
-.m-txt-white {
-  color: var(--white-color);
-}
-
-.m-bg-primary {
-  background-color: var(--primary-color);
-} */
 
 /* navbar  */
 .navbar {
@@ -154,8 +106,11 @@ body {
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+	.navbar .navbar-nav .nav-link {
+		padding: 2px 6px;
+	}
 	.navbar-expand-lg .navbar-nav {
-		margin-left: 5rem;
+		margin-left: 2rem;
 	}
 }
 @media (max-width: 767.98px) {
@@ -1249,18 +1204,6 @@ body {
 	
 }
 
-/* @media (max-width: 767.98px) {
-	.team-section .row {
-		margin: 30px 0 !important;
-	}
-	.team-section .team-member {
-		padding: 40px 0;
-	}
-	.team-section .team-img {
-		width: 80%;
-	}
-} */
-
 /************************
   Start whymark-page
 *************************/
@@ -1418,56 +1361,60 @@ body {
 
 /* NextDigital Hero section  */
 .next-hero {
-	/* padding: 100px 0 0; */
-	text-align: center;
-	margin: auto;
-	position: relative;
-	background: url("../img/next/hero-img.png") no-repeat center center/cover;
-	height: calc(92vh - 120px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 120px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+	height: calc(100vh - 100px);
+    background: url("../img/next/hero-img.png") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Overlay */
 .next-hero .overlay {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
-	z-index: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Content */
 .next-hero .content {
-	position: relative;
-	color: var(--white-color);
-	text-align: left;
-	max-width: 80%;
-	z-index: 2;
+    position: relative;
+    color: var(--white-color);
+    text-align: left;
+    max-width: 80%;
+    z-index: 2;
 }
+
 .next-hero h2 {
-	font-size: 3rem;
-	color: var(--primary-color);
-	margin-bottom: 1rem;
-	padding: 50px 0;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
+
 .next-hero h2 img {
-	height: 50px;
-	width: auto;
+    height: 50px;
+    width: auto;
 }
+
 .next-hero h3 {
-	font-size: 2rem;
-	width: 80%;
+    font-size: 2rem;
+    width: 80%;
 }
+
 .next-hero p {
-	font-size: 1.1rem;
-	font-style: italic;
-	font-weight: 400;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 400;
 }
+
 
 /* start why-nextdigital section   */
 .why-nextdigital p {
@@ -1480,10 +1427,7 @@ body {
 
 /* start next-cta section   */
 .next-cta {
-	height: 450px;
-}
-.next-cta h2 {
-	font-size: 1.8rem !important;
+	/* height: 450px; */
 }
 
 /* Start Accordion Services section */
@@ -1569,7 +1513,19 @@ body {
 	font-weight: normal;
 	font-size: 20px;
 }
-
+/* accrodion responsive  */
+@media (max-width: 768px) {
+	.accordion-header .title {
+		font-size: 16px;
+	}
+	.accordion-item.active .accordion-content p {
+		font-size: 15px;
+		line-height: 140%;
+	}
+	.service-ele {
+		font-size: 15px;
+	}
+}
 /* start extra services section  */
 .extra-services {
 	background: url(../img/next/extra-services-bg.png) no-repeat center center/cover;
@@ -1592,6 +1548,18 @@ body {
 .extra-services .btn {
 	width: 413.77px;
 }
+@media (max-width: 768px) {
+	.extra-services h2 {
+		font-size: 30px;
+	}
+	.extra-services p {
+		font-size: 16px;
+	}
+	.extra-services .btn {
+		width: 100%;
+	}
+}
+
 /* start pricing section    */
 .packages {
 	padding: 100px 0 50px !important;
@@ -1623,13 +1591,17 @@ body {
 	background: #171717;
 }
 .features-section .row > div {
-	padding: 0 4rem;
+	padding: 0 0rem;
 }
 .features-section .feature-box img {
 	width: auto;
 	height: auto;
 }
-
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.features-section .feature-box img {
+		height: 25px !important;
+	}
+}
 /* start packages  */
 .packages .digital-two .card-body {
 	padding: 2.1rem !important;
@@ -1739,7 +1711,14 @@ body {
 .strategy-cta {
 	background: url(../img/next/strategy/stratgy-cta-bg.png) no-repeat center center/cover;
 }
-
+@media (max-width: 768px) {
+	.strategy-cta {
+		height: 600px;
+	}
+	.strategy-cta .w-75 {
+		width: 100% !important;
+	}
+}
 /* Benefits section slider */
 .benefits .slider-benefits {
 	display: flex;
@@ -1885,6 +1864,7 @@ body {
 	}
 	.why-nextdigital h2 {
 		font-size: 1.8rem !important;
+		margin-bottom: 15px;
 	}
 	.why-nextdigital h2 img {
 		height: 30px;
@@ -1972,7 +1952,9 @@ body {
 	display: block;
 	padding: 10px;
 }
-
+.sis-logos {
+	text-align: center !important;
+}
 .footer .footer-sis-logo {
 	height: 30px;
 }
@@ -2116,7 +2098,12 @@ body {
 	padding: 20px;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
-
+@media (max-width: 768px) {
+	.bubble-container {
+		padding-left: 0px;
+		margin-left: -30px;
+	}
+}
 /* Positioning classes for bubbles */
 .bubble-pos-1 {
 	top: 15%;
