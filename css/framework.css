@@ -35,6 +35,24 @@
     background-color: var(--primary-color);
     border-color: var(--primary-color);
   }
+/* btns responsive  */
+@media (max-width: 575.98px) {
+    .btns-contianer {
+      display: flex;
+      flex-direction: column;
+    }
+    .m-black-btn {
+      padding: 8px 12px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    .m-white-btn {
+      padding: 8px 12px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+}
+
   /* font colors  */
   .m-txt-primary {
     color: var(--primary-color);
@@ -113,6 +131,22 @@
   }
 }
 
+@media (max-width: 575.98px) {
+  .cta-section {
+    height: 400px;
+  }
+  .cta-section .cta-heading {
+    font-size: 1.2rem;
+  }
+  .cta-section .cta-p {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .cta-section .cta-buttons .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
 
 
 /* 
