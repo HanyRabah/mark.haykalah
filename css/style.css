@@ -165,6 +165,13 @@ body {
 	}
 	.navbar .navbar-nav {
 		margin-left: 0;
+		padding: 20px 4px;
+	}
+	.navbar .navbar-nav li {
+		padding: 20px 0;
+	}
+	.navbar .navbar-nav .nav-link {
+		padding: 15px 10px;
 	}
 }
 @media (max-width: 575.98px) {
@@ -271,7 +278,7 @@ body {
 .why-us-section {
 	background-color: #000;
 	color: #fff;
-	padding: 80px 25px;
+	padding: 80px 0px;
 	position: relative;
 	overflow: hidden;
 }
@@ -706,6 +713,7 @@ body {
 	#our-services:hover .sec-h h2 {
 		font-size: 3rem !important;
 	}
+	
 	.service-box .service-content p {
 		font-size: 18px;
 	}
@@ -724,6 +732,9 @@ body {
 	.service-box {
 		flex-direction: column;
 		text-align: center;
+	}
+	.service-content {
+		text-align: left;
 	}
 	.service-box .service-content p {
 		font-size: 18px;
@@ -1118,6 +1129,52 @@ body {
 	letter-spacing: 0.36px;
 }
 
+/* start team member section   */
+.team-section {
+	background-color: #000;
+	color: #fff;
+	padding: 80px 0px;
+}
+
+.team-section .team-heading {
+	font-size: 2.5rem;
+	color: #c4c4ff;
+	margin-bottom: 15px;
+}
+
+.team-section .team-description {
+	font-size: 1.2rem;
+	color: #d1d1d1;
+}
+
+.team-section .team-member {
+	flex: 0 0 auto;
+	/* width: 250px; */
+	text-align: center;
+}
+
+.team-section .team-img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+	filter: brightness(50%);
+	transition: filter 0.3s ease-in-out;
+}
+
+.team-section .team-img:hover {
+	filter: brightness(100%);
+}
+
+.team-section .team-member h4 {
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+}
+.team-section .team-member span {
+	font-size: 1rem;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.about-us h2 {
 		font-size: 1.5rem;
@@ -1164,6 +1221,15 @@ body {
 		padding: 10px 20px;
 		font-size: 0.9rem;
 	}
+	.team-section .row {
+		margin: 30px 0 !important;
+	}
+	.team-section .team-member {
+		padding: 40px 0;
+	}
+	.team-section .team-img {
+		width: 80%;
+	}
 }
 
 @media (max-width: 576px) {
@@ -1175,79 +1241,25 @@ body {
 	}
 	.about-us h4 {
 		font-size: 1rem;
+		padding-top : 12px;
 	}
 	.about-us p {
 		font-size: 1rem;
 	}
-	.about-us .btn {
-		padding: 10px 20px;
-		font-size: 0.9rem;
+	
+}
+
+/* @media (max-width: 767.98px) {
+	.team-section .row {
+		margin: 30px 0 !important;
 	}
-}
-
-/* start team member section   */
-.team-section {
-	background-color: #000;
-	color: #fff;
-	padding: 80px 0px;
-}
-
-.team-section .team-heading {
-	font-size: 2.5rem;
-	color: #c4c4ff;
-	margin-bottom: 15px;
-}
-
-.team-section .team-description {
-	font-size: 1.2rem;
-	color: #d1d1d1;
-}
-
-/* .team-section .team-slider-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  display: flex;
-  gap: 20px;
-  padding: 20px 0;
+	.team-section .team-member {
+		padding: 40px 0;
+	}
+	.team-section .team-img {
+		width: 80%;
+	}
 } */
-
-/* .team-section .team-slides {
-  display: flex;
-  gap: 20px;
-} */
-
-/* .team-section .team-slider-container::-webkit-scrollbar {
-  display: none;
-} */
-
-.team-section .team-member {
-	flex: 0 0 auto;
-	/* width: 250px; */
-	text-align: center;
-}
-
-.team-section .team-img {
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-	border-radius: 10px;
-	filter: brightness(50%);
-	transition: filter 0.3s ease-in-out;
-}
-
-.team-section .team-img:hover {
-	filter: brightness(100%);
-}
-
-.team-section .team-member h4 {
-	margin-top: 1rem;
-	font-size: 1rem;
-	font-weight: 600;
-}
-.team-section .team-member span {
-	font-size: 1rem;
-}
 
 /************************
   Start whymark-page
@@ -1367,6 +1379,9 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
+	.page-header {
+		padding: 80px 0 50px;
+	}
 	.whymark-page .heading h2 {
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
@@ -1386,6 +1401,14 @@ body {
 
 	.svg-background {
 		bottom: -30px;
+	}
+}
+@media (max-width: 575.98px) {
+	.whymark-content h3 {
+		font-size: 20px;
+	}
+	.whymark-content p {
+		font-size: 18px;
 	}
 }
 
