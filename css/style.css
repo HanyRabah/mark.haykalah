@@ -359,6 +359,27 @@ body {
 	object-fit: cover;
 }
 
+.why-us-section .swiper-slide .swiper-learn-more {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -16px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	gap: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 18px;
+	font-size: 14px;
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+}
+.why-us-section .swiper-slide:hover .swiper-learn-more {
+	opacity: 1;
+}
+
 .why-us-section .swiper-slide .slide-text {
 	position: absolute;
 	top: 0;
@@ -579,6 +600,7 @@ body {
 /* Service Box Styling */
 #our-services .service-action {
 	text-decoration: none;
+	width: 100%;
 }
 .service-box {
 	background: #111;
@@ -586,6 +608,7 @@ body {
 	border-radius: 10px;
 	transition: 0.5s ease-in-out;
 	cursor: pointer;
+	position: relative;
 }
 
 .service-box:hover {
@@ -594,34 +617,38 @@ body {
 .service-box .service-content .service-heading {
 	height: 35px;
 	width: auto;
-	margin-bottom: 1.5rem !important;
+	margin-bottom: 12px;
 }
 
 .service-box .service-content p {
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 24px;
-	text-transform: capitalize;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0;
+	width: 80%;
 	color: var(--white-color);
 }
 /* Button Style */
 .service-box .services-btn {
-	margin-top: 4%;
+	position: absolute;
+	bottom: 10px;
+	right: 8px;
+	font-size: 14px;
 }
 .service-box .learn-more-button {
 	white-space: nowrap;
-	display: inline-block;
-	padding: 10px;
-	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px;
+	color: #00ffcc;
 	text-decoration: none;
 	border-radius: 5px;
-	font-weight: bold;
 }
 
 .service-box .btn-learn-more i {
-	margin-left: 5px;
+	margin-left: 12px;
 }
-.service-box .learn-more-button:hover {
+.service-box:hover .learn-more-button {
 	color: var(--white-color);
 }
 
@@ -724,6 +751,9 @@ body {
 }
 .about-us-section .left-content .view-all-btn:hover i {
 	margin-left: 5px;
+}
+.about-us-section strong {
+	font-weight: 600;
 }
 @media (max-width: 768px) {
 	.about-us-section .left-content {
@@ -1412,43 +1442,24 @@ body {
 	margin-right: 10px;
 }
 
-.accordion-header span {
-	position: relative;
-	width: 24px;
-	height: 24px;
+.accordion-header .icon {
+	color: var(--primary-color);
+	transition: all 0.2s ease-in-out;
+	font-size: 18px;
+}
+.accordion-item.active .accordion-header .icon {
+	color: var(--white-color);
+	filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
 	display: inline-block;
-}
-
-.accordion-header span::before,
-.accordion-header span::after {
-	content: "";
-	position: absolute;
-	background-color: #fff;
-	transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.accordion-header span::before {
-	width: 100%;
-	height: 4px;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-}
-
-.accordion-header span::after {
-	width: 4px;
-	height: 100%;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%);
 }
 
 .accordion-item.active .accordion-header {
 	color: var(--primary-color);
-}
-/* Change icon to "X" when active */
-.accordion-item.active .accordion-header span::after {
-	transform: translateX(-50%) rotate(90deg);
 }
 
 .accordion-item.active .accordion-header span::before,
@@ -1867,6 +1878,10 @@ body {
 .footer .f-social-media ul li {
 	display: block;
 	padding: 10px;
+}
+
+.footer .footer-sis-logo {
+	height: 30px;
 }
 .copyright {
 	padding-top: 3rem;
