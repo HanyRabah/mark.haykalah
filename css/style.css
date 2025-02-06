@@ -165,6 +165,27 @@ body {
 	}
 	.navbar .navbar-nav {
 		margin-left: 0;
+		padding: 20px 4px;
+	}
+	.navbar .navbar-nav li {
+		padding: 20px 0;
+	}
+	.navbar .navbar-nav .nav-link {
+		padding: 15px 10px;
+	}
+}
+@media (max-width: 575.98px) {
+	.navbar {
+		height: 90px;
+	}
+	.navbar-brand img {
+		height: 40px !important;
+	}
+	.navbar .navbar-nav {
+		padding: 20px 4px;
+	}
+	.navbar .navbar-nav li {
+		padding: 10px 0;
 	}
 }
 
@@ -257,7 +278,7 @@ body {
 .why-us-section {
 	background-color: #000;
 	color: #fff;
-	padding: 80px 25px;
+	padding: 80px 0px;
 	position: relative;
 	overflow: hidden;
 }
@@ -416,6 +437,10 @@ body {
 		flex: 0 0 100%;
 		max-width: 100%;
 	}
+}
+
+@media (max-width: 575.98px) { 
+	
 }
 
 /* 
@@ -688,6 +713,7 @@ body {
 	#our-services:hover .sec-h h2 {
 		font-size: 3rem !important;
 	}
+	
 	.service-box .service-content p {
 		font-size: 18px;
 	}
@@ -707,12 +733,38 @@ body {
 		flex-direction: column;
 		text-align: center;
 	}
+	.service-content {
+		text-align: left;
+	}
 	.service-box .service-content p {
 		font-size: 18px;
 	}
 	.services-icon {
 		width: 100px;
 		right: 0;
+	}
+}
+@media (max-width: 575.98px) {
+	#our-services {
+		padding: 40px 0;
+	}
+	.service-content {
+		text-align: left;
+	}
+	.service-box .service-content .service-heading {
+		height: 25px;
+	}
+	.service-box {
+		padding: 1rem .5rem !important;
+		gap: 10px;
+	}
+	.service-box .service-content p {
+		font-size: 16px;
+		text-align: left;
+	}
+	.service-box .services-btn {
+		right: 0px;
+		font-size: 12px;
 	}
 }
 
@@ -763,7 +815,7 @@ body {
 	transition: 0.5s;
 }
 .about-us-section .left-content .view-all-btn:hover {
-	color: var(--primary-color);
+	color: var(--black-color);
 }
 .about-us-section .left-content .view-all-btn:hover i {
 	margin-left: 5px;
@@ -771,28 +823,7 @@ body {
 .about-us-section strong {
 	font-weight: 600;
 }
-@media (max-width: 768px) {
-	.about-us-section .left-content {
-		clip-path: none;
-		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-	}
-	.about-us-section .left-content h2 {
-		font-size: 1.2rem !important;
-		padding: 5rem 0 0 1rem;
-	}
-	.about-us-section .left-content .text {
-		padding: 1rem;
-	}
-	.about-us-section .left-content p {
-		line-height: 1.6rem;
-		font-size: 1.1rem;
-		padding-right: 20px;
-	}
-	.about-us-section .left-content .view-all-btn {
-		padding: 10px 20px;
-		font-size: 1rem;
-	}
-}
+
 /* Right Section Background */
 .about-us-section .right-section-bg {
 	height: 100%;
@@ -821,11 +852,37 @@ body {
 		clip-path: none;
 	}
 }
-
 @media (max-width: 768px) {
-	.about-us-section .right-section-bg {
-		display: none;
+	.about-us-section {
+		padding: 0px;
 	}
+	.about-us-section .left-content {
+		padding: 20px 0px;
+		clip-path: none;
+	}
+	.about-us-section .left-content h2 {
+		font-size: 1.2rem !important;
+		padding: 2rem 0 0 1rem;
+	}
+	.about-us-section .left-content .text {
+		padding: 20px 10px;
+	}
+	.about-us-section .left-content p {
+		line-height: 1.6rem;
+		font-size: 1rem;
+		padding-right: 10px;
+	}
+	.about-us-section .left-content .view-all-btn {
+		padding: 10px 20px;
+		font-size: .9rem;
+	}
+	.about-us-section .right-section-bg {
+		display: none !important;
+	}
+}
+
+@media (max-width: 575.98px) {
+	
 }
 
 /* start KickstartLine  */
@@ -964,6 +1021,30 @@ body {
 	opacity: 0.8;
 }
 
+@media (max-width: 768px) {
+	.contact-data {
+		margin-bottom: 20px !important;
+	}
+	.contact-info .social-circle {
+		width: 30px;
+		height: 30px;
+		margin-left: 70%;
+		margin-bottom: 10px !important;
+	}
+	.contact-info h3 {
+		font-size: 1.1rem;
+	}
+	.contact-info ul li strong {
+		min-width: 70px;
+	}
+	.contact-info ul li span {
+		font-size: 14px;
+	}
+	.contact-form::after {
+		display: none;
+	}
+}
+
 /* =======================
     == Start About Us Page
 ==========================*/
@@ -1048,6 +1129,52 @@ body {
 	letter-spacing: 0.36px;
 }
 
+/* start team member section   */
+.team-section {
+	background-color: #000;
+	color: #fff;
+	padding: 80px 0px;
+}
+
+.team-section .team-heading {
+	font-size: 2.5rem;
+	color: #c4c4ff;
+	margin-bottom: 15px;
+}
+
+.team-section .team-description {
+	font-size: 1.2rem;
+	color: #d1d1d1;
+}
+
+.team-section .team-member {
+	flex: 0 0 auto;
+	/* width: 250px; */
+	text-align: center;
+}
+
+.team-section .team-img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+	filter: brightness(50%);
+	transition: filter 0.3s ease-in-out;
+}
+
+.team-section .team-img:hover {
+	filter: brightness(100%);
+}
+
+.team-section .team-member h4 {
+	margin-top: 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+}
+.team-section .team-member span {
+	font-size: 1rem;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.about-us h2 {
 		font-size: 1.5rem;
@@ -1094,6 +1221,15 @@ body {
 		padding: 10px 20px;
 		font-size: 0.9rem;
 	}
+	.team-section .row {
+		margin: 30px 0 !important;
+	}
+	.team-section .team-member {
+		padding: 40px 0;
+	}
+	.team-section .team-img {
+		width: 80%;
+	}
 }
 
 @media (max-width: 576px) {
@@ -1105,79 +1241,25 @@ body {
 	}
 	.about-us h4 {
 		font-size: 1rem;
+		padding-top : 12px;
 	}
 	.about-us p {
 		font-size: 1rem;
 	}
-	.about-us .btn {
-		padding: 10px 20px;
-		font-size: 0.9rem;
+	
+}
+
+/* @media (max-width: 767.98px) {
+	.team-section .row {
+		margin: 30px 0 !important;
 	}
-}
-
-/* start team member section   */
-.team-section {
-	background-color: #000;
-	color: #fff;
-	padding: 80px 0px;
-}
-
-.team-section .team-heading {
-	font-size: 2.5rem;
-	color: #c4c4ff;
-	margin-bottom: 15px;
-}
-
-.team-section .team-description {
-	font-size: 1.2rem;
-	color: #d1d1d1;
-}
-
-/* .team-section .team-slider-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  display: flex;
-  gap: 20px;
-  padding: 20px 0;
+	.team-section .team-member {
+		padding: 40px 0;
+	}
+	.team-section .team-img {
+		width: 80%;
+	}
 } */
-
-/* .team-section .team-slides {
-  display: flex;
-  gap: 20px;
-} */
-
-/* .team-section .team-slider-container::-webkit-scrollbar {
-  display: none;
-} */
-
-.team-section .team-member {
-	flex: 0 0 auto;
-	/* width: 250px; */
-	text-align: center;
-}
-
-.team-section .team-img {
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-	border-radius: 10px;
-	filter: brightness(50%);
-	transition: filter 0.3s ease-in-out;
-}
-
-.team-section .team-img:hover {
-	filter: brightness(100%);
-}
-
-.team-section .team-member h4 {
-	margin-top: 1rem;
-	font-size: 1rem;
-	font-weight: 600;
-}
-.team-section .team-member span {
-	font-size: 1rem;
-}
 
 /************************
   Start whymark-page
@@ -1297,6 +1379,9 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
+	.page-header {
+		padding: 80px 0 50px;
+	}
 	.whymark-page .heading h2 {
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
@@ -1316,6 +1401,14 @@ body {
 
 	.svg-background {
 		bottom: -30px;
+	}
+}
+@media (max-width: 575.98px) {
+	.whymark-content h3 {
+		font-size: 20px;
+	}
+	.whymark-content p {
+		font-size: 18px;
 	}
 }
 
@@ -1905,6 +1998,12 @@ body {
 		flex-direction: column;
 		justify-content: center !important;
 		align-items: center !important;
+	}
+	.sis-logos a {
+		display: block;
+		margin: auto;
+		text-align: center;
+		padding: 10px 0;
 	}
 	.footer-social {
 		margin-bottom: 1rem;

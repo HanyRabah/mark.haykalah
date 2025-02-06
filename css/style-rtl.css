@@ -1,0 +1,54 @@
+body {
+    /* text-align: right; */
+    direction: rtl;
+}
+
+
+/* start navbar  */
+.navbar .navbar-nav {
+    margin-right: 20rem;
+}
+
+
+/* start hero section  */
+.circle {
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+
+/* start services section  */
+
+.service-box .services-btn {
+    left: 10px;
+}
+
+/* creativity section auto slider  */
+.creativity .slider {
+    animation: slide-animation-rtl 35s linear infinite;
+}
+
+@keyframes slide-animation-rtl {
+    from {
+        transform: translateX(300%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* services section  */
+.service-box {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+.services-icon {
+    right: auto;
+    left: -100px;
+}
+#our-services:hover .services-icon {
+	left: -50px;
+	right: auto;
+	transform: rotate(30deg);
+}
