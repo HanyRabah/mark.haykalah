@@ -394,8 +394,7 @@ body {
 	}
 }
 
-@media (max-width: 575.98px) { 
-	
+@media (max-width: 575.98px) {
 }
 
 /* 
@@ -668,7 +667,7 @@ body {
 	#our-services:hover .sec-h h2 {
 		font-size: 3rem !important;
 	}
-	
+
 	.service-box .service-content p {
 		font-size: 18px;
 	}
@@ -710,7 +709,7 @@ body {
 		height: 25px;
 	}
 	.service-box {
-		padding: 1rem .5rem !important;
+		padding: 1rem 0.5rem !important;
 		gap: 10px;
 	}
 	.service-box .service-content p {
@@ -829,7 +828,7 @@ body {
 	}
 	.about-us-section .left-content .view-all-btn {
 		padding: 10px 20px;
-		font-size: .9rem;
+		font-size: 0.9rem;
 	}
 	.about-us-section .right-section-bg {
 		display: none !important;
@@ -837,7 +836,6 @@ body {
 }
 
 @media (max-width: 575.98px) {
-	
 }
 
 /* start KickstartLine  */
@@ -1196,12 +1194,11 @@ body {
 	}
 	.about-us h4 {
 		font-size: 1rem;
-		padding-top : 12px;
+		padding-top: 12px;
 	}
 	.about-us p {
 		font-size: 1rem;
 	}
-	
 }
 
 /************************
@@ -2092,7 +2089,7 @@ body {
 /* Container for the bubbles */
 .bubble-container {
 	position: relative;
-	min-height: 400px;
+	min-height: 250px;
 	width: 100%;
 	overflow: hidden;
 	padding: 20px;
@@ -2106,39 +2103,39 @@ body {
 }
 /* Positioning classes for bubbles */
 .bubble-pos-1 {
-	top: 15%;
-	left: 10%;
+	top: 20%;
+	left: 5%;
 }
 .bubble-pos-2 {
-	top: 25%;
-	left: 30%;
+	top: 15%;
+	left: 25%;
 }
 .bubble-pos-3 {
 	top: 20%;
-	left: 50%;
+	left: 44%;
 }
 .bubble-pos-4 {
-	top: 35%;
+	top: 15%;
 	left: 70%;
 }
 .bubble-pos-5 {
-	top: 45%;
-	left: 40%;
+	top: 75%;
+	left: 34%;
 }
 .bubble-pos-6 {
-	top: 55%;
-	left: 60%;
+	top: 50%;
+	left: 75%;
 }
 .bubble-pos-7 {
-	top: 65%;
-	left: 25%;
+	top: 60%;
+	left: 10%;
 }
 .bubble-pos-8 {
-	top: 70%;
-	left: 80%;
+	top: 80%;
+	left: 65%;
 }
 .bubble-pos-9 {
-	top: 80%;
+	top: 50%;
 	left: 45%;
 }
 
