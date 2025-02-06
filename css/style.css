@@ -1960,7 +1960,9 @@ body {
 	display: block;
 	padding: 10px;
 }
-
+.sis-logos {
+	text-align: center !important;
+}
 .footer .footer-sis-logo {
 	height: 30px;
 }
