@@ -352,7 +352,7 @@ body {
 	transition: all 0.5s ease-in-out;
 	opacity: 0;
 }
-.why-us-section .swiper-slide:hover .swiper-learn-more {
+.why-us-section .swiper-slide-active .swiper-learn-more {
 	opacity: 1;
 }
 
@@ -378,6 +378,10 @@ body {
 }
 .why-us-section .swiper-slide-active .slide-text {
 	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.why-us-section .swiper-slide-active .slide-text h4 {
+	text-shadow: 1px 1px 10px black;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -651,6 +655,7 @@ body {
 	right: -100px;
 	width: 300px;
 	transition: 0.8s ease-in-out;
+	opacity: 0.25;
 }
 
 #our-services:hover .services-icon {
