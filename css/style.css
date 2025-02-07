@@ -218,7 +218,7 @@ body {
 	#heroCarousel .m-black-btn {
 		margin-top: 0.5rem !important;
 	}
-	.circle {
+	.line-container {
 		display: none;
 	}
 }
@@ -1020,13 +1020,52 @@ body {
 	fill: var(--secondary2-color);
 	transition: fill 0.5s ease-in-out;
 }
-.about-us h2 {
-	margin-bottom: 3rem;
-	padding-top: 5rem;
-	transition: transform 0.5s ease-in-out;
+.about-us .header-container {
+	width: 100%;
+	padding: 10px;
+	margin: 40px 0;
+	background: #000;
+	width: fit-content;
 }
-.about-us:hover h2 {
-	transform: translateY(-2rem);
+
+.about-us .header-top {
+	background: white;
+	padding: 10px 40px;
+	clip-path: polygon(1% 0, 100% 0, 99% 100%, 2% 100%);
+	width: fit-content;
+	transition: all 0.3s ease;
+}
+
+.about-us .header-bottom {
+	position: relative;
+	background: #23ffc6;
+	padding: 10px 40px;
+	clip-path: polygon(1.5% 0, 99% 0, 100% 100%, 0% 100%);
+	block-size: fit-content;
+	transition: all 0.3s ease;
+}
+
+.about-us .header-top h1 {
+	color: #ffa366;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+.header-bottom h2 {
+	color: black;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.header-top:hover {
+	transform: translateX(-5px);
+	transition: transform 0.3s ease;
+}
+
+.header-bottom:hover {
+	transform: translateX(5px);
+	transition: transform 0.3s ease;
 }
 
 .about-us:hover .bg-img img {
@@ -1358,60 +1397,59 @@ body {
 
 /* NextDigital Hero section  */
 .next-hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 	height: calc(100vh - 100px);
-    background: url("../img/next/hero-img.png") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	background: url("../img/next/hero-img.png") no-repeat center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Overlay */
 .next-hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Content */
 .next-hero .content {
-    position: relative;
-    color: var(--white-color);
-    text-align: left;
-    max-width: 80%;
-    z-index: 2;
+	position: relative;
+	color: var(--white-color);
+	text-align: left;
+	max-width: 80%;
+	z-index: 2;
 }
 
 .next-hero h2 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+	font-size: 3rem;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
 }
 
 .next-hero h2 img {
-    height: 50px;
-    width: auto;
+	height: 50px;
+	width: auto;
 }
 
 .next-hero h3 {
-    font-size: 2rem;
-    width: 80%;
+	font-size: 2rem;
+	width: 80%;
 }
 
 .next-hero p {
-    font-size: 1.1rem;
-    font-style: italic;
-    font-weight: 400;
+	font-size: 1.1rem;
+	font-style: italic;
+	font-weight: 400;
 }
-
 
 /* start why-nextdigital section   */
 .why-nextdigital p {
@@ -2243,7 +2281,7 @@ body {
 .lamp-container {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 100%;
 	width: 180px;
 	height: 180px;
 	animation: float 3s ease-in-out infinite;
@@ -2277,4 +2315,43 @@ body {
 	animation: glowCycle 6s ease-in-out infinite;
 	pointer-events: none;
 	mix-blend-mode: screen; /* Makes the glow blend better */
+}
+/* Animation for the flare effect */
+@keyframes lineFlare {
+	0% {
+		stroke-dashoffset: 1000;
+		stroke-width: 1;
+		filter: drop-shadow(0 0 2px rgba(152, 255, 217, 0.5));
+	}
+	50% {
+		stroke-width: 1;
+		filter: drop-shadow(0 0 8px rgba(152, 255, 217, 0.8));
+	}
+	100% {
+		stroke-dashoffset: -1000;
+		stroke-width: 1;
+		filter: drop-shadow(0 0 2px rgba(152, 255, 217, 0.5));
+	}
+}
+
+.curved-line {
+	fill: none;
+	stroke: #98ffd9;
+	stroke-width: 1;
+	stroke-dasharray: 1000;
+	animation: lineFlare 11s linear infinite;
+}
+
+.line-container {
+	/* width: 100%;
+	height: 100%;
+	min-height: 300px; */
+
+	width: 50%;
+	height: 70%;
+	position: absolute;
+	top: 16%;
+	right: 10%;
+	z-index: 1;
+	overflow: visible;
 }
