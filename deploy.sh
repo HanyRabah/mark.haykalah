@@ -10,6 +10,12 @@ echo "Starting deployment at $(date)" >> $LOG_FILE
 
 # Navigate to repo
 cd $REPO_PATH || { echo "Repo path not found!" >> $LOG_FILE; exit 1; }
+echo "Fetching latest changes" >> $LOG_FILE
+git fetch origin main >> $LOG_FILE 2>&1
+# Reset local branch to match remote
+
+echo "Resetting to match remote branch" >> $LOG_FILE
+git reset --hard origin/main >> $LOG_FILE 2>&1
 
 # Pull latest changes
 git pull origin main >> $LOG_FILE 2>&1
