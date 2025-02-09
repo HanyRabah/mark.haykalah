@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             create_item(
                 board_id: 1743837969,
                 group_id: "new_group_mkk9xdev", 
-                item_name: "' . addslashes($name) . '", 
+                item_name: "' . addslashes($first_name . ' ' . $last_name) . '",
                 column_values: "' . addslashes(json_encode($column_values)) . '"
             ) {
                 id
