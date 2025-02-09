@@ -45,6 +45,10 @@
 
 		<link rel="stylesheet" href="css/framework.css" />
 		<link rel="stylesheet" href="css/style.css" />
+<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6H7KWH6"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 	</head>
 
 	<body>
@@ -85,37 +89,37 @@
 				<div class="row content">
 					<!-- Contact Info Section -->
 					<div class="col-lg-4 col-md-6 col-sm-12 p-lg-0 d-flex flex-column justify-content-between">
-						<div class="contact-info p-5 rounded shadow-sm h-100">
-							<h3 class="mb-4 pt-3 fw-bold mb-5 pb-4">Contact Us</h3>
+						<div class="contact-info p-4 rounded shadow-sm h-100">
+							<h2 class="mb-4 pt-3 fw-bold mb-3 pb-2">Contact Us</h2>
 							<ul class="list-unstyled contact-data mb-4">
-								<li class="mb-4 d-flex align-items-start">
+								<li class="mb-4 d-flex align-items-center">
 									<i class="fa-solid fa-globe flex-shrink-0 me-4"></i>
 									<span class="flex-grow-1"
 										><a href="#" class="text-dark text-decoration-none">www.mark.haykalah.com</a></span
 									>
 								</li>
-								<li class="mb-4 d-flex align-items-start">
+								<li class="mb-4 d-flex align-items-center">
 									<i class="fa-solid fa-phone-volume flex-shrink-0 me-4"></i>
 									<span class="flex-grow-1"
 										><a href="tel:+966556963626" class="text-dark text-decoration-none">+966 55 6963 626</a></span
 									>
 								</li>
-								<li class="mb-4 d-flex align-items-start">
+								<li class="mb-4 d-flex align-items-center">
 									<i class="fa-solid fa-envelope flex-shrink-0 me-4"></i>
 									<span class="flex-grow-1"
 										><a href="mailto:mark@haykalahmark.com" class="text-dark text-decoration-none"
-											>mark@haykalah.com</a
+											>Mark@haykalah.com</a
 										></span
 									>
 								</li>
 								<li class="mb-4 d-flex align-items-start">
-									<i class="fa-solid fa-location-dot me-4 flex-shrink-0"></i>
+									<i class="fa-solid fa-location-dot me-4 flex-shrink-0 pt-1"></i>
 									<span class="flex-grow-1"
 										><a
 											href="https://maps.app.goo.gl/LuvE1TbdaxgPGPeGA"
 											class="text-dark text-decoration-none"
 											target="_blank">
-											Jebah6988, 6988 Abo AlAbas ben Abdulmoteleb, Jeddah</a
+											Jebah6988, 6988 Abo AlAbas ben Abdulmoteleb, Jeddah, Saudi Arabia</a
 										></span
 									>
 								</li>
@@ -153,62 +157,67 @@
 						<div class="contact-form p-4 position-relative">
 							<form id="contact-form" action="submit_form.php" method="post">
 								<div class="row">
-									<div class="col-md-6 mb-3">
+									<div class="col-md-6 mb-4">
 										<label for="first-name">First Name</label>
 										<input type="text" id="first-name" name="first_name" class="form-control custom-input" required />
 									</div>
-									<div class="col-md-6 mb-3">
+									<div class="col-md-6 mb-4">
 										<label for="last-name">Last Name</label>
 										<input type="text" id="last-name" name="last_name" class="form-control custom-input" required />
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-6 mb-3">
+									<div class="col-md-6 mb-4">
 										<label for="email">Email</label>
 										<input type="email" id="email" name="email" class="form-control custom-input" />
 									</div>
-									<div class="col-md-6 mb-3">
+									<div class="col-md-6 mb-4">
 										<label for="phone">Phone Number</label>
 										<input type="tel" id="phone" name="phone" class="form-control custom-input" required />
 									</div>
 								</div>
 								<div class="mb-4 mt-1">
-									<p class="form-label fw-bold">Select Subject?</p>
-									<div class="d-flex flex-wrap gap-3">
-										<input
-											type="checkbox"
-											id="general"
-											name="subject"
-											class="form-check-input"
-											onclick="onlyOne(this)" />
-										<label for="general" class="form-check-label">NextDigital</label>
+									<p class="form-label fw-bold mb-3">Select Subject?</p>
+									<div class="d-flex flex-wrap gap-3 align-content-center">
+										<div class="d-flex align-items-center gap-1">
+											<input
+												type="checkbox"
+												id="nextDigital"
+												name="subject"
+												class="form-check-input m-0"
+												onclick="onlyOne(this)" />
+											<label for="nextDigital" class="form-check-label">Next Digital</label>
+										</div>
 
-										<input
-											type="checkbox"
-											id="feedback"
-											name="subject"
-											class="form-check-input"
-											onclick="onlyOne(this)" />
-										<label for="feedback" class="form-check-label">NextStrategy</label>
+										<div class="d-flex align-items-center gap-1">
+											<input
+												type="checkbox"
+												id="nextstrategy"
+												name="subject"
+												class="form-check-input m-0"
+												onclick="onlyOne(this)" />
+											<label for="nextstrategy" class="form-check-label">Next Strategy</label>
+										</div>
 
-										<input
-											type="checkbox"
-											id="support"
-											name="subject"
-											class="form-check-input"
-											onclick="onlyOne(this)" />
-										<label for="support" class="form-check-label">NextQuality</label>
+										<div class="d-flex align-items-center gap-1">
+											<input
+												type="checkbox"
+												id="nextquality"
+												name="subject"
+												class="form-check-input m-0"
+												onclick="onlyOne(this)" />
+											<label for="nextquality" class="form-check-label">Next Quality</label>
+										</div>
 
-										<input
-											type="checkbox"
-											id="feedback"
-											name="subject"
-											class="form-check-input"
-											onclick="onlyOne(this)" />
-										<label for="feedback" class="form-check-label">NextAi</label>
-
-										<!-- <input type="checkbox" id="other" name="subject" class="form-check-input" onclick="onlyOne(this)">
-                          <label for="other" class="form-check-label">NextPeople</label> -->
+										<div class="d-flex align-items-center gap-1">
+											<input
+												type="checkbox"
+												id="nextai"
+												name="subject"
+												class="form-check-input m-0"
+												onclick="onlyOne(this)" />
+											<label for="nextai" class="form-check-label">Next Ai</label>
+										</div>
 									</div>
 								</div>
 								<div class="mb-3">
@@ -222,7 +231,7 @@
 										required></textarea>
 								</div>
 								<div class="d-flex justify-content-end">
-									<button type="submit" class="btn btn-lg submit-btn">Send Message</button>
+									<button type="submit" class="btn btn-md submit-btn">Send Message</button>
 								</div>
 							</form>
 						</div>
@@ -328,5 +337,21 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/script.js"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQSDMFFWM5"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-ZQSDMFFWM5');
+		</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N6H7KWH6');</script>
+		<!-- End Google Tag Manager -->
 	</body>
 </html>
