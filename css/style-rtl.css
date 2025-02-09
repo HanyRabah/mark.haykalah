@@ -12,7 +12,10 @@ body {
     /* margin-right: 20rem; */
     margin-left: 0px;
 }
-
+.custom-dropdown-menu {
+    left: auto;
+    right: 0;
+}
 
 /* start hero section  */
 .circle {
