@@ -200,6 +200,10 @@ body {
 	#heroCarousel h2 {
 		font-size: 2rem !important;
 	}
+	.line-container{
+		top: 11%!important;
+    	right: 6%!important;
+	}
 }
 
 @media (max-width: 767.98px) {
