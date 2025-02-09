@@ -14,12 +14,10 @@ body {
 	height: 85px !important;
 }
 .navbar .navbar-nav {
-	margin-left: 20rem;
 	z-index: 1;
+	gap: 15px;
 }
-.navbar .navbar-nav .nav-item {
-	margin-right: 1rem;
-}
+
 .navbar .navbar-nav .nav-link {
 	padding: 2px 10px;
 	font-size: 1.1rem;
@@ -752,7 +750,7 @@ body {
 
 .about-us-section .left-content h2 {
 	margin-bottom: 10px;
-	padding: 0 0 0 3rem;
+	/* padding: 0 0 0 3rem; */
 }
 
 .about-us-section .left-content h2 span {
@@ -760,7 +758,7 @@ body {
 }
 
 .about-us-section .left-content .text {
-	padding: 3rem 0 0 3rem;
+	padding: 1.5rem 0 0 0rem;
 }
 
 .about-us-section .left-content p {
@@ -799,9 +797,6 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-	.about-us-section .left-content {
-		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-	}
 	.about-us-section .left-content h2 {
 		padding: 4rem 0 0 0rem;
 	}
@@ -821,7 +816,6 @@ body {
 	}
 	.about-us-section .left-content {
 		padding: 20px 0px;
-		clip-path: none;
 	}
 	.about-us-section .left-content h2 {
 		font-size: 1.2rem !important;

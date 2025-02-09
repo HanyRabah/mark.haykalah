@@ -9,21 +9,16 @@ body {
 .navbar-expand-lg .navbar-collapse {
     justify-content: space-around;
 }
-.navbar .navbar-nav {
-    /* margin-right: 20rem; */
-    margin-left: 0px;
-}
 .custom-dropdown-menu {
     left: auto;
     right: 0;
 }
 
 /* start hero section  */
-.circle {
+.curved-line {
     right: 40%;
     transform: scaleX(-1);
 }
-
 
 /* start services section  */
 
@@ -60,8 +55,12 @@ body {
 	right: auto;
 	transform: rotate(30deg);
 }
-
-
+/* conatct section  */
+.contact-form::after {
+    right: 70%;
+    left: auto;
+    transform: scaleX(-1) rotate(-45deg);
+}
 
 /*************************
 == About Us Page
@@ -82,4 +81,7 @@ body {
 .packages ul li svg {
     margin-right: 0;
     margin-left: 8px;
+}
+.modon-ar {
+    width: 75%;
 }
