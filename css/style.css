@@ -200,6 +200,10 @@ body {
 	#heroCarousel h2 {
 		font-size: 2rem !important;
 	}
+	.line-container{
+		top: 11%!important;
+    	right: 6%!important;
+	}
 }
 
 @media (max-width: 767.98px) {
@@ -218,7 +222,7 @@ body {
 	#heroCarousel .m-black-btn {
 		margin-top: 0.5rem !important;
 	}
-	.circle {
+	.line-container {
 		display: none;
 	}
 }
@@ -352,7 +356,7 @@ body {
 	transition: all 0.5s ease-in-out;
 	opacity: 0;
 }
-.why-us-section .swiper-slide:hover .swiper-learn-more {
+.why-us-section .swiper-slide-active .swiper-learn-more {
 	opacity: 1;
 }
 
@@ -380,6 +384,10 @@ body {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
+.why-us-section .swiper-slide-active .slide-text h4 {
+	text-shadow: 1px 1px 10px black;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 	.why-us-section .slide {
 		flex: 0 0 50%;
@@ -394,8 +402,7 @@ body {
 	}
 }
 
-@media (max-width: 575.98px) { 
-	
+@media (max-width: 575.98px) {
 }
 
 /* 
@@ -652,6 +659,7 @@ body {
 	right: -100px;
 	width: 300px;
 	transition: 0.8s ease-in-out;
+	opacity: 0.25;
 }
 
 #our-services:hover .services-icon {
@@ -668,7 +676,7 @@ body {
 	#our-services:hover .sec-h h2 {
 		font-size: 3rem !important;
 	}
-	
+
 	.service-box .service-content p {
 		font-size: 18px;
 	}
@@ -710,7 +718,7 @@ body {
 		height: 25px;
 	}
 	.service-box {
-		padding: 1rem .5rem !important;
+		padding: 1rem 0.5rem !important;
 		gap: 10px;
 	}
 	.service-box .service-content p {
@@ -829,7 +837,7 @@ body {
 	}
 	.about-us-section .left-content .view-all-btn {
 		padding: 10px 20px;
-		font-size: .9rem;
+		font-size: 0.9rem;
 	}
 	.about-us-section .right-section-bg {
 		display: none !important;
@@ -837,7 +845,6 @@ body {
 }
 
 @media (max-width: 575.98px) {
-	
 }
 
 /* start KickstartLine  */
@@ -1022,13 +1029,52 @@ body {
 	fill: var(--secondary2-color);
 	transition: fill 0.5s ease-in-out;
 }
-.about-us h2 {
-	margin-bottom: 3rem;
-	padding-top: 5rem;
-	transition: transform 0.5s ease-in-out;
+.about-us .header-container {
+	width: 100%;
+	padding: 10px;
+	margin: 40px 0;
+	background: #000;
+	width: fit-content;
 }
-.about-us:hover h2 {
-	transform: translateY(-2rem);
+
+.about-us .header-top {
+	background: white;
+	padding: 10px 40px;
+	clip-path: polygon(1% 0, 100% 0, 99% 100%, 2% 100%);
+	width: fit-content;
+	transition: all 0.3s ease;
+}
+
+.about-us .header-bottom {
+	position: relative;
+	background: #23ffc6;
+	padding: 10px 40px;
+	clip-path: polygon(1.5% 0, 99% 0, 100% 100%, 0% 100%);
+	block-size: fit-content;
+	transition: all 0.3s ease;
+}
+
+.about-us .header-top h1 {
+	color: #ffa366;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+.header-bottom h2 {
+	color: black;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.header-top:hover {
+	transform: translateX(-5px);
+	transition: transform 0.3s ease;
+}
+
+.header-bottom:hover {
+	transform: translateX(5px);
+	transition: transform 0.3s ease;
 }
 
 .about-us:hover .bg-img img {
@@ -1196,12 +1242,11 @@ body {
 	}
 	.about-us h4 {
 		font-size: 1rem;
-		padding-top : 12px;
+		padding-top: 12px;
 	}
 	.about-us p {
 		font-size: 1rem;
 	}
-	
 }
 
 /************************
@@ -1361,60 +1406,59 @@ body {
 
 /* NextDigital Hero section  */
 .next-hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 	height: calc(100vh - 100px);
-    background: url("../img/next/hero-img.png") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	background: url("../img/next/hero-img.png") no-repeat center center/cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Overlay */
 .next-hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Content */
 .next-hero .content {
-    position: relative;
-    color: var(--white-color);
-    text-align: left;
-    max-width: 80%;
-    z-index: 2;
+	position: relative;
+	color: var(--white-color);
+	text-align: left;
+	max-width: 80%;
+	z-index: 2;
 }
 
 .next-hero h2 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+	font-size: 3rem;
+	color: var(--primary-color);
+	margin-bottom: 1rem;
 }
 
 .next-hero h2 img {
-    height: 50px;
-    width: auto;
+	height: 50px;
+	width: auto;
 }
 
 .next-hero h3 {
-    font-size: 2rem;
-    width: 80%;
+	font-size: 2rem;
+	width: 80%;
 }
 
 .next-hero p {
-    font-size: 1.1rem;
-    font-style: italic;
-    font-weight: 400;
+	font-size: 1.1rem;
+	font-style: italic;
+	font-weight: 400;
 }
-
 
 /* start why-nextdigital section   */
 .why-nextdigital p {
@@ -2092,7 +2136,7 @@ body {
 /* Container for the bubbles */
 .bubble-container {
 	position: relative;
-	min-height: 400px;
+	min-height: 250px;
 	width: 100%;
 	overflow: hidden;
 	padding: 20px;
@@ -2106,39 +2150,39 @@ body {
 }
 /* Positioning classes for bubbles */
 .bubble-pos-1 {
-	top: 15%;
-	left: 10%;
+	top: 20%;
+	left: 5%;
 }
 .bubble-pos-2 {
-	top: 25%;
-	left: 30%;
+	top: 15%;
+	left: 25%;
 }
 .bubble-pos-3 {
 	top: 20%;
-	left: 50%;
+	left: 44%;
 }
 .bubble-pos-4 {
-	top: 35%;
+	top: 15%;
 	left: 70%;
 }
 .bubble-pos-5 {
-	top: 45%;
-	left: 40%;
+	top: 75%;
+	left: 34%;
 }
 .bubble-pos-6 {
-	top: 55%;
-	left: 60%;
+	top: 50%;
+	left: 75%;
 }
 .bubble-pos-7 {
-	top: 65%;
-	left: 25%;
+	top: 60%;
+	left: 10%;
 }
 .bubble-pos-8 {
-	top: 70%;
-	left: 80%;
+	top: 80%;
+	left: 65%;
 }
 .bubble-pos-9 {
-	top: 80%;
+	top: 50%;
 	left: 45%;
 }
 
@@ -2246,7 +2290,7 @@ body {
 .lamp-container {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: 100%;
 	width: 180px;
 	height: 180px;
 	animation: float 3s ease-in-out infinite;
@@ -2280,4 +2324,42 @@ body {
 	animation: glowCycle 6s ease-in-out infinite;
 	pointer-events: none;
 	mix-blend-mode: screen; /* Makes the glow blend better */
+}
+/* Animation for the flare effect */
+@keyframes lineFlare {
+	0% {
+		stroke-dashoffset: 1000;
+		stroke-width: 3;
+		filter: drop-shadow(0 0 2px rgba(152, 255, 217, 0.8));
+	}
+	50% {
+		stroke-width: 3;
+		filter: drop-shadow(0 0 8px rgba(152, 255, 217, 1));
+	}
+	100% {
+		stroke-dashoffset: -1000;
+		stroke-width: 3;
+		filter: drop-shadow(0 0 2px rgba(152, 255, 217, 0.8));
+	}
+}
+
+
+
+.curved-line {
+	fill: none;
+	stroke: #00ffcc;
+	stroke-opacity: 0.6;
+	stroke-width: 1;
+	stroke-dasharray: 1000;
+	animation: lineFlare 12s linear infinite;
+}
+
+.line-container {
+	width: 50%;
+	height: 70%;
+	position: absolute;
+	top: 16%;
+	right: 10%;
+	z-index: 1;
+	overflow: visible;
 }

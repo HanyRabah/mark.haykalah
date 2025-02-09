@@ -531,10 +531,10 @@ progress {
   list-style: none;
 }
 
-.list-inline-item {
+.list-inline-item mr-0 {
   display: inline-block;
 }
-.list-inline-item:not(:last-child) {
+.list-inline-item mr-0:not(:last-child) {
   margin-right: 0.5rem;
 }
 
