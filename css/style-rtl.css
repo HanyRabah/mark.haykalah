@@ -1,8 +1,9 @@
 body {
     /* text-align: right; */
     direction: rtl;
+    font-family: "Alexandria", sans-serif;
 }
-
+/*
 
 /* start navbar  */
 .navbar-expand-lg .navbar-collapse {
