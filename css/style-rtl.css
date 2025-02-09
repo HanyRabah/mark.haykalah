@@ -66,3 +66,16 @@ body {
     left: 0;
     right: auto;
 }
+
+/*************************
+== Next Digital page
+*************************/
+.next-hero .content {
+    text-align: right;
+}
+
+/* packages  */
+.packages ul li svg {
+    margin-right: 0;
+    margin-left: 8px;
+}
