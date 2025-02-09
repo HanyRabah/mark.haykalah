@@ -766,7 +766,7 @@ body {
 .about-us-section .left-content p {
 	color: #000;
 	font-size: 1.1rem;
-	font-style: normal;
+	font-weight: regular!important;
 	padding-right: 50px;
 	font-weight: 300;
 	line-height: 2rem;
@@ -983,6 +983,25 @@ body {
 	opacity: 0.8;
 }
 
+/* Default style for mobile (vertical layout) */
+.contact-info .list-inline {
+	display: flex;
+     flex-direction: row;
+    justify-content: center;
+	gap: 12px
+}
+
+
+
+/* Style for desktop (horizontal layout) */
+.footer .list-inline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+}
+
+
 @media (max-width: 768px) {
 	.contact-data {
 		margin-bottom: 20px !important;
@@ -1005,6 +1024,14 @@ body {
 	.contact-form::after {
 		display: none;
 	}
+	.footer .list-inline {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		justify-content: center
+	}
+
 }
 
 /* =======================
