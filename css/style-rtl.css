@@ -1,54 +1,92 @@
 body {
-    /* text-align: right; */
-    direction: rtl;
-    font-family: "Alexandria", sans-serif;
+	/* text-align: right; */
+	direction: rtl;
+	font-family: "Alexandria", sans-serif;
 }
+
+p {
+	line-height: 1.8rem !important;
+}
+
+#heroCarousel h2 {
+	font-size: 2.4rem;
+	color: var(--white-color);
+	width: 75%;
+	padding: 5rem 0 1rem 1rem;
+}
+
 /*
 
 /* start navbar  */
 .navbar-expand-lg .navbar-collapse {
-    justify-content: space-around;
+	justify-content: space-around;
 }
 .custom-dropdown-menu {
-    left: auto;
-    right: 0;
+	left: auto;
+	right: 0;
 }
 
 /* start hero section  */
 .curved-line {
-    right: 40%;
-    transform: scaleX(-1);
+	right: 40%;
+	transform: scaleX(-1);
 }
 
 /* start services section  */
 
 .service-box .services-btn {
-    left: 10px;
+	left: 10px;
+}
+
+.service-content {
+	text-align: right;
+}
+.service-box .services-btn {
+	left: 0;
+	right: inherit;
+}
+
+.swiper-slide-prev {
+	border-color: #011c2a;
+	border-width: 0 8px 8px 0;
+	border-style: solid;
+}
+.swiper-slide-next {
+	border-color: #011c2a;
+
+	border-width: 0 0 8px 8px;
+	border-style: solid;
 }
 
 /* creativity section auto slider  */
 .creativity .slider {
-    animation: slide-animation-rtl 35s linear infinite;
+	animation: slide-animation-rtl 35s linear infinite;
+}
+
+@media (max-width: 768px) {
+	.about-us-section .left-content h2 {
+		font-size: 1.2rem !important;
+		padding: 2rem 1rem 0 0;
+	}
 }
 
 @keyframes slide-animation-rtl {
-    from {
-        transform: translateX(300%);
-    }
-    to {
-        transform: translateX(0);
-    }
+	from {
+		transform: translateX(300%);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
-
 
 /* services section  */
 .service-box {
-    border-left: none;
-    border-right: 4px solid var(--primary-color);
+	border-left: none;
+	border-right: 4px solid var(--primary-color);
 }
 .services-icon {
-    right: auto;
-    left: -100px;
+	right: auto;
+	left: -100px;
 }
 #our-services:hover .services-icon {
 	left: -50px;
@@ -57,31 +95,31 @@ body {
 }
 /* conatct section  */
 .contact-form::after {
-    right: 70%;
-    left: auto;
-    transform: scaleX(-1) rotate(-45deg);
+	right: 70%;
+	left: auto;
+	transform: scaleX(-1) rotate(-45deg);
 }
 
 /*************************
 == About Us Page
 *************************/
 .lamp-container {
-    left: 0;
-    right: auto;
+	left: 0;
+	right: auto;
 }
 
 /*************************
 == Next Digital page
 *************************/
 .next-hero .content {
-    text-align: right;
+	text-align: right;
 }
 
 /* packages  */
 .packages ul li svg {
-    margin-right: 0;
-    margin-left: 8px;
+	margin-right: 0;
+	margin-left: 8px;
 }
 .modon-ar {
-    width: 75%;
+	width: 75%;
 }
