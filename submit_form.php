@@ -1,34 +1,43 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Capture form data
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    // Capture form data safely
+    $first_name = isset($_POST['first_name']) ? trim($_POST['first_name']) : '';
+    $last_name = isset($_POST['last_name']) ? trim($_POST['last_name']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
+    // Handle checkboxes (Multiple selection handling)
+    $subject = isset($_POST['subject']) ? (is_array($_POST['subject']) ? implode(", ", $_POST['subject']) : $_POST['subject']) : 'No Subject';
 
-    // Prepare the column_values in JSON format
+    // Ensure first and last name are not empty
+    if (empty($first_name) || empty($last_name)) {
+        die("Error: First name or last name is missing.");
+    }
+
+    // Set item name
+    $item_name = $first_name . ' ' . $last_name;
+
+    // Prepare column values for Monday.com
     $column_values = [
-        "first_name" => $first_name,  
-        "last_name" => $last_name,  
+        "first_name" => $first_name,
+        "last_name" => $last_name,
         'email_mkka74q8' => [
-            'email' => $email,  
+            'email' => $email,
             'text' => $email     
         ],
-        'short_text_mkkagy8h'=> $phone,
+        'short_text_mkkagy8h' => $phone,
         "short_text_subject" => $subject,
         'long_text_mkkapyz7' => $message
     ];
 
-    // Prepare the GraphQL query for creating an item
+    // Prepare GraphQL query for Monday.com
     $query = '
         mutation {
             create_item(
                 board_id: 1743837969,
-                group_id: "new_group_mkk9xdev", 
-                item_name: "' . addslashes($first_name . ' ' . $last_name) . '",
+                group_id: "new_group_mkk9xdev",
+                item_name: "' . addslashes($item_name) . '",
                 column_values: "' . addslashes(json_encode($column_values)) . '"
             ) {
                 id
@@ -36,16 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     ';
 
-    // API Key for Monday.com (Replace with your actual API key)
-    $api_key = 'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQ0ODQ3OTMwNiwiYWFpIjoxMSwidWlkIjo2OTU1MzgzNywiaWFkIjoiMjAyNC0xMi0xNlQwOTo1ODozMC4zODlaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjY4ODEwMzUsInJnbiI6ImV1YzEifQ.XNIa79hgxMKfmEjc-eXDYJswRKggz-ItIT35KLnrWqI';
+    // API Key for Monday.com
+    $api_key = 'your_monday_api_key_here';
 
-    // Send the request to Monday.com API using cURL
+    // Send request to Monday.com API
     $response = sendToMondayAPI($query, $api_key);
-
-    // Decode the response to handle it
     $response_data = json_decode($response, true);
 
-    // Check if the response contains data
+    // Handle response
     if (isset($response_data['data']['create_item'])) {
         echo "Item created successfully! ID: " . $response_data['data']['create_item']['id'];
     } else {
@@ -53,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Function to send the GraphQL query to the Monday.com API
+// Function to send GraphQL query to Monday.com API
 function sendToMondayAPI($query, $api_key) {
     $url = "https://api.monday.com/v2";
 
@@ -69,13 +76,13 @@ function sendToMondayAPI($query, $api_key) {
         CURLOPT_POSTFIELDS => json_encode(['query' => $query]),
     ];
 
-    // Initialize cURL session and execute the request
+    // Execute cURL request
     $ch = curl_init();
     curl_setopt_array($ch, $options);
     $response = curl_exec($ch);
 
-    // Check for cURL errors
-    if(curl_errno($ch)) {
+    // Handle cURL errors
+    if (curl_errno($ch)) {
         echo 'Error:' . curl_error($ch);
     }
 
