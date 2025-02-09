@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepare the column_values in JSON format
     $column_values = [
         "first_name" => $first_name,  
-        "last_name" => $first_name,  
+        "last_name" => $last_name,  
         'email_mkka74q8' => [
             'email' => $email,  
             'text' => $email     
