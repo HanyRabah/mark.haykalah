@@ -5,15 +5,22 @@ body {
 
 
 /* start navbar  */
-.navbar .navbar-nav {
-    margin-right: 20rem;
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-around;
 }
-
+.navbar .navbar-nav {
+    /* margin-right: 20rem; */
+    margin-left: 0px;
+}
+.custom-dropdown-menu {
+    left: auto;
+    right: 0;
+}
 
 /* start hero section  */
 .circle {
-    left: 10%;
-    transform: translateX(-50%);
+    right: 40%;
+    transform: scaleX(-1);
 }
 
 
@@ -51,4 +58,27 @@ body {
 	left: -50px;
 	right: auto;
 	transform: rotate(30deg);
+}
+
+
+
+/*************************
+== About Us Page
+*************************/
+.lamp-container {
+    left: 0;
+    right: auto;
+}
+
+/*************************
+== Next Digital page
+*************************/
+.next-hero .content {
+    text-align: right;
+}
+
+/* packages  */
+.packages ul li svg {
+    margin-right: 0;
+    margin-left: 8px;
 }
