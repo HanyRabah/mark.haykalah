@@ -1246,12 +1246,7 @@ body {
 	height: 300px;
 	object-fit: cover;
 	border-radius: 10px;
-	filter: brightness(50%);
 	transition: filter 0.3s ease-in-out;
-}
-
-.team-section .team-img:hover {
-	filter: brightness(100%);
 }
 
 .team-section .team-member h4 {
@@ -2460,4 +2455,11 @@ body {
 	right: 10%;
 	z-index: 1;
 	overflow: visible;
+}
+
+.ar-font {
+	font-family: "Alexandria", sans-serif;
+}
+.en-font {
+	font-family: "Montserrat", sans-serif;
 }
