@@ -28,13 +28,23 @@ $(document).ready(function(){
         var formData = form.serialize();
         var responseDiv = form.attr('id') === 'contact-form' ? "#contact-response" : "#package-response";
 
+		console.log("Submitting form:", form.attr('id'));
+        console.log("Response div:", responseDiv);
+
         $.ajax({
             type: "POST",
             url: "submit_form.php",
             data: formData,
             dataType: "json",
+			contentType: "application/x-www-form-urlencoded",
             success: function(response){
-                // $(responseDiv).html('<p class="alert alert-success">' + response.message + '</p>');
+				
+                console.log("Response received:", response);
+				if ($(responseDiv).length === 0) {
+                    console.error("Response div not found:", responseDiv);
+                    return;
+                }
+
 				if (response.status === "success") {
                     $(responseDiv).html('<p class="alert alert-success">' + response.message + '</p>');
                     form[0].reset();
@@ -43,6 +53,7 @@ $(document).ready(function(){
                 }
             },
 			error: function(){
+				console.error("Ajax error occurred");
                 $(responseDiv).html('<p class="alert alert-danger">Submission failed. Please try again.' + response.message + '</p>');
             }
 			
