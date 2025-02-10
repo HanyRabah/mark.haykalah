@@ -129,8 +129,9 @@ p {
 	margin-left: 8px;
 }
 .modon-ar {
-    width: 75%;
+	width: 75%;
 }
+
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
