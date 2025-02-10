@@ -1,5 +1,9 @@
 <?php
+header('Content-Type: application/json');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $response = ['status' => 'error', 'message' => 'Invalid form submission.'];
+
     // Identify which form was submitted
     $form_type = isset($_POST['form_type']) ? $_POST['form_type'] : '';
 
@@ -10,58 +14,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = isset($_POST['email']) ? trim($_POST['email']) : '';
         $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
         $message = isset($_POST['message']) ? trim($_POST['message']) : '';
-
-        // Handle checkboxes for subject selection
         $subject = isset($_POST['subject']) ? (is_array($_POST['subject']) ? implode(", ", $_POST['subject']) : $_POST['subject']) : 'No Subject';
 
-        // Validate required fields
         if (empty($first_name) || empty($last_name)) {
-            die("Error: First name or last name is missing.");
+            echo json_encode(['status' => 'error', 'message' => 'First name or last name is missing.']);
+            exit;
         }
 
-        // Prepare item name
         $item_name = $first_name . ' ' . $last_name;
-
-        // Prepare column values for Monday.com
         $column_values = [
             "first_name" => $first_name,
             "last_name" => $last_name,
-            'email_mkka74q8' => [
-                'email' => $email,
-                'text' => $email     
-            ],
+            'email_mkka74q8' => ['email' => $email, 'text' => $email],
             'short_text_mkkagy8h' => $phone,
             "short_text_subject" => $subject,
             'long_text_mkkapyz7' => $message
         ];
 
     } elseif ($form_type == 'package_form_ar' || $form_type == 'package_form_en') {
-        // Process Package Selection Form (Arabic or English)
+        // Process Package Form
         $name = isset($_POST['name']) ? trim($_POST['name']) : '';
         $email = isset($_POST['email']) ? trim($_POST['email']) : '';
         $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
         $package = isset($_POST['package']) ? trim($_POST['package']) : '';
         $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-        // Validate required fields
         if (empty($name) || empty($email) || empty($phone) || empty($package)) {
-            die("Error: All fields are required.");
+            echo json_encode(['status' => 'error', 'message' => 'All fields are required.']);
+            exit;
         }
-        $item_name = $name;
 
-        // Prepare column values for Monday.com
+        $item_name = $name;
         $column_values = [
             "short_text_name" => $name,
-            'email_mkka74q8' => [
-                'email' => $email,
-                'text' => $email
-            ],
+            'email_mkka74q8' => ['email' => $email, 'text' => $email],
             'short_text_phone' => $phone,
             "short_text_package" => $package,
             'long_text_message' => $message
         ];
     } else {
-        die("Error: Invalid form submission.");
+        echo json_encode(['status' => 'error', 'message' => 'Invalid form submission.']);
+        exit;
     }
 
     // Prepare GraphQL query for Monday.com
@@ -78,26 +71,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     ';
 
-    // API Key for Monday.com
+    // API Key
     $api_key = 'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQ0ODQ3OTMwNiwiYWFpIjoxMSwidWlkIjo2OTU1MzgzNywiaWFkIjoiMjAyNC0xMi0xNlQwOTo1ODozMC4zODlaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjY4ODEwMzUsInJnbiI6ImV1YzEifQ.XNIa79hgxMKfmEjc-eXDYJswRKggz-ItIT35KLnrWqI';
 
-    // Send request to Monday.com API
-    $response = sendToMondayAPI($query, $api_key);
-    $response_data = json_decode($response, true);
+    // Send data to Monday.com
+    $response_data = sendToMondayAPI($query, $api_key);
+    $decoded_response = json_decode($response_data, true);
 
-    // Handle response
-    if (isset($response_data['data']['create_item'])) {
-        echo "Item created successfully! ID: " . $response_data['data']['create_item']['id'];
+    if (isset($decoded_response['data']['create_item'])) {
+        echo json_encode(['status' => 'success', 'message' => 'Form submitted successfully!', 'item_id' => $decoded_response['data']['create_item']['id']]);
     } else {
-        echo "Error: " . $response_data['errors'][0]['message'];
+        echo json_encode(['status' => 'error', 'message' => 'API Error: ' . $decoded_response['errors'][0]['message']]);
     }
 }
 
-// Function to send GraphQL query to Monday.com API
+// Function to send GraphQL request to Monday.com API
 function sendToMondayAPI($query, $api_key) {
     $url = "https://api.monday.com/v2";
 
-    // Set up cURL options
     $options = [
         CURLOPT_URL => $url,
         CURLOPT_RETURNTRANSFER => true,
@@ -109,19 +100,16 @@ function sendToMondayAPI($query, $api_key) {
         CURLOPT_POSTFIELDS => json_encode(['query' => $query]),
     ];
 
-    // Execute cURL request
     $ch = curl_init();
     curl_setopt_array($ch, $options);
     $response = curl_exec($ch);
 
-    // Handle cURL errors
     if (curl_errno($ch)) {
-        echo 'Error:' . curl_error($ch);
+        echo json_encode(['status' => 'error', 'message' => 'cURL Error: ' . curl_error($ch)]);
+        exit;
     }
 
-    // Close cURL session
     curl_close($ch);
-
     return $response;
 }
 ?>
