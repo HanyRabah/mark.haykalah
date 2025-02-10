@@ -1410,16 +1410,20 @@
 
 								<!-- Contact Form -->
 								<form action="../submit_form.php" method="post">
-									<input type="hidden" name="form_type" value="package_form_ar">
+									<input type="hidden" name="form_type" value="package_form_ar" />
+
 									<div class="mb-3">
-										<input type="text" class="form-control" placeholder="الاسم *" required />
+										<input type="text" class="form-control" name="name" placeholder="الاسم *" required />
 									</div>
+
 									<div class="mb-3">
-										<input type="email" class="form-control" placeholder="*البريد الاكترونى" required />
+										<input type="email" class="form-control" name="email" placeholder="*البريد الاكترونى" required />
 									</div>
+
 									<div class="mb-3">
-										<input type="text" class="form-control" placeholder="الهاتف المحمول *" required />
+										<input type="text" class="form-control" name="phone" placeholder="الهاتف المحمول *" required />
 									</div>
+
 									<div class="mb-3">
 										<select class="form-select" name="package" required>
 											<option value="" selected>اختر الباقة</option>
@@ -1428,9 +1432,11 @@
 											<option value="digital-pro">ديجيتال برو</option>
 										</select>
 									</div>
+
 									<div>
-										<textarea class="form-control" rows="5" placeholder="رسالتك" required></textarea>
+										<textarea class="form-control" rows="5" name="message" placeholder="رسالتك"></textarea>
 									</div>
+
 									<button type="submit" class="btn btn-light w-100 text-dark fw-bold">ارسال</button>
 								</form>
 
