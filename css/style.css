@@ -103,12 +103,21 @@ body {
 	color: var(--black-color);
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (max-width: 767.98px) and (max-width: 1199.98px) {
 	.navbar .navbar-nav .nav-link {
 		padding: 2px 6px;
 	}
 	.navbar-expand-lg .navbar-nav {
 		margin-left: 2rem;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) {
+	.navbar .navbar-nav {
+		padding: 20px 0;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	.navbar .navbar-nav .nav-link {
+		padding: 15px 10px;
 	}
 }
 @media (max-width: 767.98px) {
@@ -764,9 +773,7 @@ body {
 .about-us-section .left-content p {
 	color: #000;
 	font-size: 1.1rem;
-	font-weight: regular!important;
-	padding-right: 50px;
-	font-weight: 300;
+	font-weight: normal !important;
 	line-height: 2rem;
 }
 
@@ -1490,11 +1497,6 @@ body {
 	margin-bottom: 20px;
 }
 
-/* start next-cta section   */
-.next-cta {
-	/* height: 450px; */
-}
-
 /* Start Accordion Services section */
 .next-services {
 	padding: 88px 0 !important;
@@ -1564,7 +1566,7 @@ body {
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
-	transition: all 0.5s ease-in-out, opacity 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
 	font-size: 20px;
 	color: var(--white-color);
 }
@@ -1577,6 +1579,10 @@ body {
 .accordion-item.active .accordion-content p {
 	font-weight: normal;
 	font-size: 20px;
+}
+.accordion-content,
+.accordion-item.active .accordion-content {
+    padding: 10px 10px 10px 20px;
 }
 /* accrodion responsive  */
 @media (max-width: 768px) {

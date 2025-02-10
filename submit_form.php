@@ -1,35 +1,67 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Capture form data safely
-    $first_name = isset($_POST['first_name']) ? trim($_POST['first_name']) : '';
-    $last_name = isset($_POST['last_name']) ? trim($_POST['last_name']) : '';
-    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-    $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+    // Identify which form was submitted
+    $form_type = isset($_POST['form_type']) ? $_POST['form_type'] : '';
 
-    // Handle checkboxes (Multiple selection handling)
-    $subject = isset($_POST['subject']) ? (is_array($_POST['subject']) ? implode(", ", $_POST['subject']) : $_POST['subject']) : 'No Subject';
+    if ($form_type == 'contact_form' || $form_type == 'contact_form_ar') {
+        // Process Contact Form (English or Arabic)
+        $first_name = isset($_POST['first_name']) ? trim($_POST['first_name']) : '';
+        $last_name = isset($_POST['last_name']) ? trim($_POST['last_name']) : '';
+        $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+        $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+        $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-    // Ensure first and last name are not empty
-    if (empty($first_name) || empty($last_name)) {
-        die("Error: First name or last name is missing.");
+        // Handle checkboxes for subject selection
+        $subject = isset($_POST['subject']) ? (is_array($_POST['subject']) ? implode(", ", $_POST['subject']) : $_POST['subject']) : 'No Subject';
+
+        // Validate required fields
+        if (empty($first_name) || empty($last_name)) {
+            die("Error: First name or last name is missing.");
+        }
+
+        // Prepare item name
+        $item_name = $first_name . ' ' . $last_name;
+
+        // Prepare column values for Monday.com
+        $column_values = [
+            "first_name" => $first_name,
+            "last_name" => $last_name,
+            'email_mkka74q8' => [
+                'email' => $email,
+                'text' => $email     
+            ],
+            'short_text_mkkagy8h' => $phone,
+            "short_text_subject" => $subject,
+            'long_text_mkkapyz7' => $message
+        ];
+
+    } elseif ($form_type == 'package_form_ar' || $form_type == 'package_form_en') {
+        // Process Package Selection Form (Arabic or English)
+        $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+        $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+        $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+        $package = isset($_POST['package']) ? trim($_POST['package']) : '';
+        $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+
+        // Validate required fields
+        if (empty($name) || empty($email) || empty($phone) || empty($package)) {
+            die("Error: All fields are required.");
+        }
+
+        // Prepare column values for Monday.com
+        $column_values = [
+            "short_text_name" => $name,
+            'email_mkka74q8' => [
+                'email' => $email,
+                'text' => $email
+            ],
+            'short_text_phone' => $phone,
+            "short_text_package" => $package,
+            'long_text_message' => $message
+        ];
+    } else {
+        die("Error: Invalid form submission.");
     }
-
-    // Set item name
-    $item_name = $first_name . ' ' . $last_name;
-
-    // Prepare column values for Monday.com
-    $column_values = [
-        "first_name" => $first_name,
-        "last_name" => $last_name,
-        'email_mkka74q8' => [
-            'email' => $email,
-            'text' => $email     
-        ],
-        'short_text_mkkagy8h' => $phone,
-        "short_text_subject" => $subject,
-        'long_text_mkkapyz7' => $message
-    ];
 
     // Prepare GraphQL query for Monday.com
     $query = '
