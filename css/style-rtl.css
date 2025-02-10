@@ -114,7 +114,15 @@ p {
 .next-hero .content {
 	text-align: right;
 }
-
+/* accordion  */
+.accordion-content,
+.accordion-item.active .accordion-content {
+    padding: 10px 20px 10px 10px;
+}
+.accordion-item .accordion-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
 /* packages  */
 .packages ul li svg {
 	margin-right: 0;
@@ -122,4 +130,11 @@ p {
 }
 .modon-ar {
 	width: 75%;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    text-align: right;
+    direction: rtl;
 }
