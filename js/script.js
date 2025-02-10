@@ -35,10 +35,12 @@ $(document).ready(function(){
             dataType: "json",
             success: function(response){
                 // $(responseDiv).html('<p class="alert alert-success">' + response.message + '</p>');
-				if (response.success) {
-					$(responseDiv).html('<p class="alert alert-success">' + response.message + '</p>');
-					form[0].reset(); // Clear form after success
-				}
+				if (response.status === "success") {
+                    $(responseDiv).html('<p class="alert alert-success">' + response.message + '</p>');
+                    form[0].reset();
+                } else {
+                    $(responseDiv).html('<p class="alert alert-danger">' + response.message + '</p>');
+                }
             },
 			error: function(){
                 $(responseDiv).html('<p class="alert alert-danger">Submission failed. Please try again.' + response.message + '</p>');
