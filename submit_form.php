@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (empty($name) || empty($email) || empty($phone) || empty($package)) {
             die("Error: All fields are required.");
         }
+        $item_name = $name;
 
         // Prepare column values for Monday.com
         $column_values = [
