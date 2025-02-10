@@ -72,10 +72,10 @@ p {
 
 @keyframes slide-animation-rtl {
 	from {
-		transform: translateX(300%);
+		transform: translateX(0);
 	}
 	to {
-		transform: translateX(0);
+		transform: translateX(300%);
 	}
 }
 
