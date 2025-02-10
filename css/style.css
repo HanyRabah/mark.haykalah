@@ -1505,7 +1505,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	height: calc(100vh - 100px);
-	background: url("../img/next/hero-img.png") no-repeat center center/cover;
+	background: url("../img/heros/nextdigital-hero.jpg") no-repeat center center/cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1649,7 +1649,7 @@ body {
 }
 .accordion-content,
 .accordion-item.active .accordion-content {
-    padding: 10px 10px 10px 20px;
+	padding: 10px 10px 10px 20px;
 }
 /* accrodion responsive  */
 @media (max-width: 768px) {
@@ -1842,7 +1842,7 @@ body {
 
 /* start next-strategy  Page*/
 .next-strategy {
-	background: url(../img/next/strategy/hero.jpg) no-repeat center center/cover;
+	background: url(../img/heros/nextstrategy-hero.jpg) no-repeat center center/cover;
 }
 
 /* Startegy CTA section  */
@@ -1910,12 +1910,12 @@ body {
 
 /* start next-quality page  */
 .next-quality {
-	background: url(../img/next/quality/hero.jpg) no-repeat center center/cover;
+	background: url(../img/heros/nextquality-hero.jpg) no-repeat center center/cover;
 }
 
 /* start next-ai page  */
 .next-ai {
-	background: url(../img/next/ai/next-ai-hero.jpg) no-repeat center center/cover;
+	background: url(../img/heros/nextai-hero.jpg) no-repeat center center/cover;
 }
 
 /* Next Pages Responsive  */
