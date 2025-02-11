@@ -5,7 +5,12 @@
 	--black-color: #030303;
 	--white-color: #fbfcfe;
 }
-
+.ar-font {
+	font-family: "Alexandria", sans-serif;
+}
+.en-font {
+	font-family: "Montserrat", sans-serif;
+}
 /*Fixed Elements */
 .m-black-btn {
 	border-radius: 4px;
