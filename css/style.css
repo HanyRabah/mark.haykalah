@@ -157,11 +157,6 @@ body {
 
 	.custom-dropdown-menu {
 		display: none;
-		/* position: static;
-		background: transparent;
-		border: none;
-		text-align: center;
-		padding: 10px 0; */
 	}
 
 	.custom-dropdown-menu a {
@@ -215,7 +210,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	position: relative !important;
-	background-image: url("../img/mark-Hero.jpg");
+	background-image: url("../img/heros/home-hero.jpg");
 }
 
 .hero .overlay {
@@ -245,18 +240,6 @@ body {
 	font-style: italic;
 }
 
-.circle {
-	width: 50%;
-	height: 70%;
-	background-image: url("../img/hero-icon.png");
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 16%;
-	right: 10%;
-	z-index: 1;
-}
 @media (min-width: 768px) and (max-width: 991.98px) {
 	#heroCarousel .slide-content {
 		padding-left: 30px !important;
@@ -372,8 +355,8 @@ body {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-	background-color: #0fd7b2;
-	border-color: #0fd7b2;
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
 }
 
 .swiper-button-next:after,
@@ -467,71 +450,6 @@ body {
 	}
 }
 
-@media (max-width: 575.98px) {
-}
-
-/* 
-/* 
-  == start CTA section  
-  == i moved this style to framework.css file
-.cta-section {
-  position: relative;
-  background-image: url('../img/cta-img.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.cta-section .cta-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.cta-section .cta-heading {
-  font-size: 2.1rem;
-  margin-bottom: 10px;
-}
-.cta-section .cta-p {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  margin: 20px auto !important;
-  width: 50%;
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .cta-section .cta-heading {
-    font-size: 2rem;
-  }
-  .cta-section .cta-p {
-    width: 90%;
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .cta-section .cta-heading {
-    font-size: 1.5rem;
-  }
-  .cta-section .cta-p {
-    font-size: 1rem;
-    width: 90%;
-  }
-  .cta-section .cta-buttons .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-} */
 
 /* start section creativity  */
 .creativity {
@@ -814,13 +732,10 @@ body {
 	position: relative;
 	z-index: 2;
 	padding: 80px 30px;
-	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%); */
 }
 
 .about-us-section .left-content h2 {
 	margin-bottom: 10px;
-	/* padding: 0 0 0 3rem; */
 }
 
 .about-us-section .left-content h2 span {
@@ -835,7 +750,6 @@ body {
 	color: #000;
 	font-size: 1.1rem;
 	font-weight: normal !important;
-	padding-right: 50px;
 	font-weight: 300;
 	line-height: 2rem;
 }
@@ -1006,7 +920,7 @@ body {
 	border-radius: 0;
 	box-shadow: none;
 	outline: none;
-	color: #000; /* Muted text color */
+	color: #000;
 	line-height: 1.2;
 	padding-left: 0;
 }
@@ -1205,7 +1119,7 @@ body {
 }
 
 .about-us:hover .about-icon {
-	fill: #ffcc00; /* Change to your desired color */
+	fill: #ffcc00;
 	transition: fill 0.5s ease-in-out;
 }
 
@@ -1625,7 +1539,7 @@ body {
 
 .accordion-item.active .accordion-header span::before,
 .accordion-item.active .accordion-header span::after {
-	background-color: #0fd7b2;
+	background-color: var(--primary-color);
 }
 
 .accordion-content {
@@ -1638,7 +1552,6 @@ body {
 	color: var(--white-color);
 }
 .accordion-item.active .accordion-content {
-	/* max-height: 100%;  */
 	font-weight: normal;
 	opacity: 1;
 	padding: 15px 15px;
@@ -1762,7 +1675,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 	min-height: 600px;
-	background: url(../img/next/next-contact-bg.jpg) no-repeat center center/cover;
+	background: url(../img/heros/home-hero.jpg) no-repeat center center/cover;
 }
 .next-contact-us .overlay {
 	padding: 50px 0;
@@ -1798,7 +1711,6 @@ body {
 	background: #1a1a1a
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
 		no-repeat right 0.75rem center/8px 10px !important;
-
 	color: white;
 	z-index: 10;
 	position: relative;
@@ -1820,10 +1732,10 @@ body {
 }
 
 .next-contact-us .contact-item {
-	flex: 1; /* Makes each item equal width */
+	flex: 1;
 	display: flex;
 	align-items: center;
-	gap: 10px; /* Space between icon and text */
+	gap: 10px;
 }
 
 .next-contact-us .contact-item i {
@@ -1832,7 +1744,7 @@ body {
 }
 
 .next-contact-us .contact-item p {
-	flex: 1; /* Makes text take remaining space */
+	flex: 1;
 	margin: 0;
 	color: white;
 }
@@ -1847,7 +1759,7 @@ body {
 
 /* Startegy CTA section  */
 .strategy-cta {
-	background: url(../img/next/strategy/stratgy-cta-bg.png) no-repeat center center/cover;
+	background: url(../img/next/strategy/stratgy-cta-bg.jpg) no-repeat center center/cover;
 }
 @media (max-width: 768px) {
 	.strategy-cta {
@@ -2038,10 +1950,6 @@ body {
 		max-width: 50% !important;
 	}
 }
-
-/*****************************************************
-== Next Quality Page 
-*****************************************************/
 
 /*****************************************************
 == Terms & Condtions - Privacy Policy
