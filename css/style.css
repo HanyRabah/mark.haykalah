@@ -568,11 +568,6 @@ body {
 	position: relative;
 }
 
-#our-services .sec-h {
-	margin-bottom: 6rem;
-	padding-left: 4rem;
-}
-
 #our-services .sec-h h2 {
 	font-size: 3.5rem;
 	transition: 0.8s ease-in-out;
@@ -601,7 +596,6 @@ body {
 .service-box .service-content .service-heading {
 	height: 35px;
 	width: auto;
-	margin-bottom: 12px;
 }
 
 .service-box .service-content p {
@@ -734,14 +728,6 @@ body {
 	padding: 80px 30px;
 }
 
-.about-us-section .left-content h2 {
-	margin-bottom: 10px;
-}
-
-.about-us-section .left-content h2 span {
-	color: var(--secondary2-color);
-}
-
 .about-us-section .left-content .text {
 	padding: 1.5rem 0 0 0rem;
 }
@@ -750,29 +736,22 @@ body {
 	color: #000;
 	font-size: 1.1rem;
 	font-weight: normal !important;
-	font-weight: 300;
 	line-height: 2rem;
 }
 
 .about-us-section .left-content .view-all-btn {
-	color: #030303;
+	color: var(--black-color);
 	text-decoration: none;
 	transition: 0.5s;
 }
 .about-us-section .left-content .view-all-btn:hover {
-	color: var(--black-color);
+	text-decoration: underline;
 }
 .about-us-section .left-content .view-all-btn:hover i {
 	margin-left: 5px;
 }
-.about-us-section strong {
-	font-weight: 600;
-}
 
 /* Right Section Background */
-.about-us-section .right-section-bg {
-	height: 100%;
-}
 
 .about-us-section .right-section-bg img {
 	height: 14vh;
@@ -781,17 +760,14 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-	.about-us-section .left-content h2 {
-		padding: 4rem 0 0 0rem;
-	}
 	.about-us-section .left-content .text {
 		padding: 0;
 	}
 	.about-us-section .left-content p {
 		padding-right: 25px;
 	}
-	.about-us-section .right-section-bg {
-		clip-path: none;
+	.about-us-section .right-section-bg img {
+		height: 10vh;
 	}
 }
 @media (max-width: 768px) {
@@ -821,44 +797,6 @@ body {
 		display: none !important;
 	}
 }
-
-@media (max-width: 575.98px) {
-}
-
-/* start KickstartLine  */
-.KickstartLine {
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-}
-.KickstartLine svg {
-	margin: 0px 5px;
-}
-@media (max-width: 1200px) {
-	.KickstartLine svg:nth-last-child(1) {
-		display: none;
-	}
-}
-
-@media (max-width: 992px) {
-	.KickstartLine svg:nth-last-child(2) {
-		display: none;
-	}
-}
-
-@media (max-width: 768px) {
-	.KickstartLine svg:nth-last-child(3) {
-		display: none;
-	}
-}
-
-@media (max-width: 576px) {
-	.KickstartLine svg:nth-last-child(4),
-	.KickstartLine svg:nth-last-child(5) {
-		display: none;
-	}
-}
-
 /*
     == Contact us section 
 */
@@ -970,12 +908,6 @@ body {
 }
 
 /* Style for desktop (horizontal layout) */
-.footer .list-inline {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0;
-}
 
 @media (max-width: 768px) {
 	.contact-data {
@@ -999,13 +931,7 @@ body {
 	.contact-form::after {
 		display: none;
 	}
-	.footer .list-inline {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		align-content: center;
-		justify-content: center;
-	}
+	
 }
 
 /* =======================
@@ -2043,9 +1969,12 @@ body {
 		text-align: center;
 		padding: 10px 0;
 	}
-	.footer-social {
-		margin-bottom: 1rem;
-		gap: 1rem !important;
+	.footer .list-inline {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
 	}
 }
 
@@ -2363,11 +2292,4 @@ body {
 	right: 10%;
 	z-index: 1;
 	overflow: visible;
-}
-
-.ar-font {
-	font-family: "Alexandria", sans-serif;
-}
-.en-font {
-	font-family: "Montserrat", sans-serif;
 }
