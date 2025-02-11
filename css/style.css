@@ -215,7 +215,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	position: relative !important;
-	background-image: url("../img/mark-Hero.jpg");
+	background-image: url("../img/heros/home-hero.jpg");
 }
 
 .hero .overlay {
@@ -245,18 +245,6 @@ body {
 	font-style: italic;
 }
 
-.circle {
-	width: 50%;
-	height: 70%;
-	background-image: url("../img/hero-icon.png");
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 16%;
-	right: 10%;
-	z-index: 1;
-}
 @media (min-width: 768px) and (max-width: 991.98px) {
 	#heroCarousel .slide-content {
 		padding-left: 30px !important;
@@ -467,71 +455,6 @@ body {
 	}
 }
 
-@media (max-width: 575.98px) {
-}
-
-/* 
-/* 
-  == start CTA section  
-  == i moved this style to framework.css file
-.cta-section {
-  position: relative;
-  background-image: url('../img/cta-img.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.cta-section .cta-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.cta-section .cta-heading {
-  font-size: 2.1rem;
-  margin-bottom: 10px;
-}
-.cta-section .cta-p {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  margin: 20px auto !important;
-  width: 50%;
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .cta-section .cta-heading {
-    font-size: 2rem;
-  }
-  .cta-section .cta-p {
-    width: 90%;
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .cta-section .cta-heading {
-    font-size: 1.5rem;
-  }
-  .cta-section .cta-p {
-    font-size: 1rem;
-    width: 90%;
-  }
-  .cta-section .cta-buttons .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-} */
 
 /* start section creativity  */
 .creativity {
@@ -1762,7 +1685,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 	min-height: 600px;
-	background: url(../img/next/next-contact-bg.jpg) no-repeat center center/cover;
+	background: url(../img/heros/home-hero.jpg) no-repeat center center/cover;
 }
 .next-contact-us .overlay {
 	padding: 50px 0;
@@ -1847,7 +1770,7 @@ body {
 
 /* Startegy CTA section  */
 .strategy-cta {
-	background: url(../img/next/strategy/stratgy-cta-bg.png) no-repeat center center/cover;
+	background: url(../img/next/strategy/stratgy-cta-bg.jpg) no-repeat center center/cover;
 }
 @media (max-width: 768px) {
 	.strategy-cta {
