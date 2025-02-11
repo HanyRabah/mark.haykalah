@@ -52,7 +52,11 @@
 		line-height: 1.2;
 	}
 }
-
+/* keep numbers in english with the same direction  */
+.number-en {
+    direction: ltr; /* Ensures left-to-right rendering */
+    unicode-bidi: embed; /* Prevents number conversion */
+}
 /* font colors  */
 .m-txt-primary {
 	color: var(--primary-color);
