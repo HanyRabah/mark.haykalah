@@ -225,7 +225,8 @@ body {
 	padding-left: 2rem;
 	padding-top: 7rem;
 }
-#heroCarousel h2 {
+#heroCarousel h2,
+#heroCarousel h1 {
 	font-size: 2.4rem;
 	color: var(--white-color);
 	width: 75%;
@@ -1373,13 +1374,13 @@ body {
 	z-index: 2;
 }
 
-.next-hero h2 {
+.next-hero h1 {
 	font-size: 3rem;
 	color: var(--primary-color);
 	margin-bottom: 1rem;
 }
 
-.next-hero h2 img {
+.next-hero h1 img {
 	height: 50px;
 	width: auto;
 }
