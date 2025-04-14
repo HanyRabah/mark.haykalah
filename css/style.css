@@ -1992,6 +1992,108 @@ body {
 	padding: 50px;
 	margin-bottom: 10px;
 }
+
+/* Start hajj contact section */
+/* Base section styles */
+.hajj-contact {
+	position: relative;
+	background: url('../img/hajj/contact-bg.jpg') no-repeat center center/cover;
+	padding: 80px 0;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.hajj-contact::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.1);
+	z-index: 1;
+}
+
+.hajj-contact .container {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+/* Outer box with shadow and semi-transparent background */
+.contact-box-outer {
+	width: 689px;
+	height: 691px;
+	border: 1px solid rgba(35, 255, 198, 0.5);
+	background: rgba(35, 255, 198, 0.15);
+	box-shadow: 0px 141px 200px -80px rgba(25, 58, 75, 0.2);
+	border-top-left-radius: 200px;
+	border-bottom-right-radius: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Inner form container */
+.contact-form-box {
+	width: 101%;
+	height: 101%;
+	background: rgba(35, 255, 198, 0.6);
+	border-top-left-radius: 200px;
+	border-bottom-right-radius: 200px;
+	box-shadow: 0px 141px 200px -80px rgba(25, 58, 75, 0.3);
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Title */
+.form-title {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 40px;
+}
+
+/* Form fields */
+.form-group {
+	margin-bottom: 24px;
+}
+
+.form-control {
+	width: 100%;
+	padding: 14px 20px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	background-color: transparent;
+	color: #000;
+	font-size: 16px;
+}
+
+.form-control::placeholder {
+	color: #000;
+	opacity: 0.7;
+}
+
+/* Submit button */
+.form-submit-btn {
+	background-color: #23FFC6;
+	color: #000;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 14px 24px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	width: 100%;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	transition: background 0.3s ease;
+}
+
+.form-submit-btn:hover {
+	background-color: #1ee6b3;
+}
+
 /*****************************************************
 == Terms & Condtions - Privacy Policy
 *****************************************************/
