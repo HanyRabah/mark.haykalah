@@ -451,7 +451,6 @@ body {
 	}
 }
 
-
 /* start section creativity  */
 .creativity {
 	background-color: #111;
@@ -932,7 +931,6 @@ body {
 	.contact-form::after {
 		display: none;
 	}
-	
 }
 
 /* =======================
@@ -1376,7 +1374,7 @@ body {
 
 .next-hero h1 {
 	font-size: 3rem;
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 	margin-bottom: 1rem;
 }
 
@@ -1878,6 +1876,122 @@ body {
 	}
 }
 
+/*****************************************************
+== Hajj Landing Page
+*****************************************************/
+.hajj {
+	background: url(../img/hajj/hajj-hero.png) no-repeat center center/cover;
+}
+.hajj .overlay {
+	background: rgba(0, 0, 0, 0.4);
+}
+/* Hajj slider section */
+.offer {
+	background: url(../img/hajj/slider-bg.jpg) no-repeat center center/cover;
+}
+.offerSwiper {
+	width: 100%;
+	padding: 20px 0;
+}
+
+.offerSwiper .swiper-slide {
+	width: 250px;
+	flex-shrink: 0;
+	cursor: grab;
+	background-color: var(--black-color) !important;
+}
+
+.offerSwiper .card {
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.offerSwiper .card:hover {
+	transform: translateY(-5px);
+}
+
+.offerSwiper img {
+	width: 100%;
+	/* height: 180px; */
+	object-fit: cover;
+}
+.offerSwiper .swiper-slide-next {
+	border: none !important;
+}
+
+/* start how it works section  */
+.how-works {
+	position: relative;
+	background: url(../img/hajj/how-works-bg.jpg) no-repeat center center/cover;
+	padding: 80px 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.how-works::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5); /* Overlay */
+	z-index: 1;
+}
+
+.how-works .container {
+	position: relative;
+	z-index: 2; /* Puts content above overlay */
+}
+
+.how-works .how-box {
+	height: 344px;
+	border-radius: 80px 10px 80px 10px;
+	border-left: 16px solid #dafff6;
+	background: linear-gradient(135deg, #ffffff 0%, #dafff6 100%);
+	box-shadow: 4px 4px 20px 0px #6cf0cecc;
+	backdrop-filter: blur(3px);
+	color: #000;
+}
+
+.how-works .step-number {
+	width: 80px;
+	height: 80px;
+	font-weight: bold;
+	border-radius: 10%;
+	font-size: 1.4rem;
+}
+ /* start trust section  */
+ .trust {
+	position: relative;
+	background: url(../img/hajj/trust-bg.jpg) no-repeat center center/cover;
+	padding: 80px 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.trust::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.1); /* Overlay */
+	z-index: 1;
+}
+.trust .container {
+	position: relative;
+	z-index: 2; /* Puts content above overlay */
+}
+.trust .trust-heading {
+	font-size: 2.5rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 170%;
+}
+.trust .box {
+	background-color: var(--white-color);
+	color: var(--black-color);
+	padding: 50px;
+	margin-bottom: 10px;
+}
 /*****************************************************
 == Terms & Condtions - Privacy Policy
 *****************************************************/

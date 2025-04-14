@@ -156,6 +156,29 @@ document.addEventListener("DOMContentLoaded", () => {
 		nextBtn.addEventListener("click", () => changeSlide(1));
 		prevBtn.addEventListener("click", () => changeSlide(-1));
 	}
+
+	// hajj slider swiper
+	const offerSwiperContainer = document.querySelector(".offerSwiper");
+	if (offerSwiperContainer) {
+		const offerSwiper = new Swiper(".offerSwiper", {
+			slidesPerView: 1.2,
+			spaceBetween: 20,
+			grabCursor: true,
+			freeMode: true,
+			touchRatio: 1,
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 3,
+				},
+				1024: {
+					slidesPerView: 4,
+				},
+			},
+		});
+	}
 });
 
 // Form validation & submission with AJAX (jQuery required)
