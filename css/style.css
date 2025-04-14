@@ -2035,8 +2035,8 @@ body {
 
 /* Inner form container */
 .contact-form-box {
-	width: 101%;
-	height: 101%;
+	width: 98%;
+	height: 95%;
 	background: rgba(35, 255, 198, 0.6);
 	border-top-left-radius: 200px;
 	border-bottom-right-radius: 200px;
