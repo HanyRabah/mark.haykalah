@@ -1937,75 +1937,67 @@ body {
 /* Start hajj contact section */
 .hajj-contact {
 	background: url('../img/hajj/contact-bg.jpg') no-repeat center center/cover;
-}
-/* Outer box with shadow and semi-transparent background */
-.contact-box-outer {
-	width: 689px;
-	height: 691px;
+  }
+  
+  .contact-box-outer {
+	width: 100%;
+	max-width: 700px;
 	border: 1px solid rgba(35, 255, 198, 0.5);
 	background: rgba(35, 255, 198, 0.15);
 	box-shadow: 0px 141px 200px -80px rgba(25, 58, 75, 0.2);
-	border-top-left-radius: 200px;
-	border-bottom-right-radius: 200px;
+	border-top-left-radius: 180px;
+	border-bottom-right-radius: 180px;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: center;
-}
-
-/* Inner form container */
-.contact-form-box {
-	width: 100%;
-	height: 100%;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  /* Inner form box that visually "extends" from outer box */
+  .contact-form-box {
 	background: rgba(35, 255, 198, 0.6);
-	border-top-left-radius: 200px;
-	border-bottom-right-radius: 200px;
-	box-shadow: 0px 141px 200px -80px rgba(25, 58, 75, 0.3);
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-right: 20px;
-	margin-top: 25px;
-}
-
-/* Form fields */
-.form-group {
-	margin-bottom: 24px;
-}
-
-.form-control {
+	border-top-left-radius: 180px;
+	border-bottom-right-radius: 180px;
+	padding: 100px 50px;
 	width: 100%;
-	padding: 14px 20px;
-	border: 1px solid #fff;
+	box-shadow: inset 0px 0px 20px rgba(25, 58, 75, 0.1);
+	position: relative;
+	z-index: 1;
+	margin: -20px; /* overlap to merge corners */
+  }
+  
+  /* Form fields styling */
+  .form-control,
+  .form-select {
+	background-color: rgba(255, 255, 255, 0.8) !important;
 	border-radius: 8px;
-	background-color: transparent;
+	border: 1px solid #fff;
 	color: #000;
-	font-size: 16px;
-}
-
-.form-control::placeholder {
+  }
+  
+  .form-control::placeholder {
 	color: #000;
 	opacity: 0.7;
-}
-
-/* Submit button */
-.form-submit-btn {
+  }
+  
+  /* Button styling */
+  .form-submit-btn {
 	background-color: #23FFC6;
 	color: #000;
 	font-weight: bold;
-	font-size: 16px;
-	padding: 14px 24px;
-	border: none;
 	border-radius: 8px;
-	cursor: pointer;
-	width: 100%;
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	border: none;
 	transition: background 0.3s ease;
-}
-
-.form-submit-btn:hover {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-submit-btn:hover {
 	background-color: #1ee6b3;
-}
+  }
+  
+
 
 /*****************************************************
 == Terms & Condtions - Privacy Policy
