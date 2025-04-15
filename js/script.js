@@ -159,26 +159,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// hajj slider swiper
 	const offerSwiperContainer = document.querySelector(".offerSwiper");
-	if (offerSwiperContainer) {
-		const offerSwiper = new Swiper(".offerSwiper", {
-			slidesPerView: 1.2,
-			spaceBetween: 20,
-			grabCursor: true,
-			freeMode: true,
-			touchRatio: 1,
-			breakpoints: {
-				640: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 3,
-				},
-				1024: {
-					slidesPerView: 4,
-				},
+if (offerSwiperContainer) {
+	const offerSwiper = new Swiper(".offerSwiper", {
+		slidesPerView: 1.2,
+		spaceBetween: 20,
+		grabCursor: true,
+		freeMode: true,
+		touchRatio: 1,
+		breakpoints: {
+			640: {
+				slidesPerView: 2.2, // shows 2 full slides + part of 3rd
 			},
-		});
-	}
+			768: {
+				slidesPerView: 3.2, // shows 3 full + partial 4th
+			},
+			1024: {
+				slidesPerView: 3.5, // shows 3 full + 50% of 4th
+			},
+		},
+	});
+}
 });
 
 // Form validation & submission with AJAX (jQuery required)
