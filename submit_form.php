@@ -52,7 +52,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             "short_text_package" => $package,
             'long_text_message' => $message
         ];
-    } else {
+    } elseif ($form_type == 'hajj_quote_form' || $form_type == 'hajj_quote_form_ar') {
+        // Handle Hajj Quote Form
+        $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+        $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+        $subject = isset($_POST['subject']) ? trim($_POST['subject']) : 'Hajj Quote';
+        $lang = $form_type === 'hajj_quote_form_ar' ? 'AR' : 'EN';
+    
+        if (empty($email) || empty($phone)) {
+            echo json_encode(['status' => 'error', 'message' => 'Email or phone number is missing.']);
+            exit;
+        }
+    
+        $item_name = 'Hajj Quote - ' . $phone;
+        $column_values = [
+            'email_mkka74q8' => ['email' => $email, 'text' => $email],
+            'short_text_mkkagy8h' => $phone,
+            'short_text_subject' => $subject,
+            'long_text_mkkapyz7' => "Quote request via Hajj Form ($lang)"
+        ];
+        } else {
         echo json_encode(['status' => 'error', 'message' => 'Invalid form submission.']);
         exit;
     }

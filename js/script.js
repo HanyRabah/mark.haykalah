@@ -182,42 +182,82 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Form validation & submission with AJAX (jQuery required)
-$(document).ready(function () {
-	$("#contact-form, #packageForm").submit(function (e) {
-		e.preventDefault();
-		var form = $(this);
-		var formData = form.serialize();
-		var responseDiv = form.attr("id") === "contact-form" ? "#contact-response" : "#package-response";
+// $(document).ready(function () {
+// 	$("#contact-form, #packageForm").submit(function (e) {
+// 		e.preventDefault();
+// 		var form = $(this);
+// 		var formData = form.serialize();
+// 		var responseDiv = form.attr("id") === "contact-form" ? "#contact-response" : "#package-response";
 
-		console.log("Submitting form:", form.attr("id"));
-		console.log("Response div:", responseDiv);
+// 		// console.log("Submitting form:", form.attr("id"));
+// 		// console.log("Response div:", responseDiv);
 
-		$.ajax({
-			type: "POST",
-			url: "submit_form.php",
-			data: formData,
-			dataType: "json",
-			contentType: "application/x-www-form-urlencoded",
-			success: function (response) {
-				console.log("Response received:", response);
-				if ($(responseDiv).length === 0) {
-					console.error("Response div not found:", responseDiv);
-					return;
-				}
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "submit_form.php",
+// 			data: formData,
+// 			dataType: "json",
+// 			contentType: "application/x-www-form-urlencoded",
+// 			success: function (response) {
+// 				console.log("Response received:", response);
+// 				if ($(responseDiv).length === 0) {
+// 					console.error("Response div not found:", responseDiv);
+// 					return;
+// 				}
 
-				if (response.status === "success") {
-					$(responseDiv).html('<p class="alert alert-success">' + response.message + "</p>");
-					form[0].reset();
-				} else {
-					$(responseDiv).html('<p class="alert alert-danger">' + response.message + "</p>");
-				}
-			},
-			error: function () {
-				console.error("Ajax error occurred");
-				$(responseDiv).html(
-					'<p class="alert alert-danger">Submission failed. Please try again.' + response.message + "</p>"
-				);
-			},
+// 				if (response.status === "success") {
+// 					$(responseDiv).html('<p class="alert alert-success">' + response.message + "</p>");
+// 					form[0].reset();
+// 				} else {
+// 					$(responseDiv).html('<p class="alert alert-danger">' + response.message + "</p>");
+// 				}
+// 			},
+// 			error: function () {
+// 				console.error("Ajax error occurred");
+// 				$(responseDiv).html(
+// 					'<p class="alert alert-danger">Submission failed. Please try again.' + response.message + "</p>"
+// 				);
+// 			},
+// 		});
+// 	});
+// });
+
+
+	$(document).ready(function () {
+		$("#contact-form, #packageForm, #hajj-form").submit(function (e) {
+			e.preventDefault();
+
+			var form = $(this);
+			var formData = form.serialize();
+			var responseDiv = "#contact-response"; // default
+
+			// Identify the form and assign the correct response div
+			if (form.attr("id") === "packageForm") {
+				responseDiv = "#package-response";
+			} else if (form.attr("id") === "hajj-form") {
+				responseDiv = "#hajj-form-response";
+			}
+
+			$.ajax({
+				type: "POST",
+				url: form.attr("action"),
+				data: formData,
+				dataType: "json",
+				success: function (response) {
+					console.log("Response received:", response);
+					
+					if (response.status === "success") {
+						$(responseDiv).html('<p class="alert alert-success">' + response.message + "</p>");
+						form[0].reset();
+					} else {
+						$(responseDiv).html('<p class="alert alert-danger">' + response.message + "</p>");
+					}
+				},
+				error: function (xhr, status, error) {
+					console.error("AJAX error:", status, error);
+					$(responseDiv).html('<p class="alert alert-danger">Submission failed. Please try again later.</p>');
+				},
+			});
 		});
 	});
-});
+
