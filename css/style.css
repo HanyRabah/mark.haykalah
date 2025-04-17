@@ -1881,7 +1881,8 @@ body {
 *****************************************************/
 .hajj {
 	background: url(../img/hajj/hajj-hero.png) no-repeat center center/cover;
-}
+	height: 100vh;
+}next-hero
 .hajj .overlay {
 	background: rgba(0, 0, 0, 0.5);
 }
