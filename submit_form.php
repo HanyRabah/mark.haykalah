@@ -54,9 +54,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ];
     } elseif ($form_type == 'hajj_quote_form' || $form_type == 'hajj_quote_form_ar') {
         // Handle Hajj Quote Form
-        $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-        $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-        $subject = isset($_POST['subject']) ? trim($_POST['subject']) : 'Hajj Quote';
+        $email     = isset($_POST['email']) ? trim($_POST['email']) : '';
+        $phone     = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+        $subject   = isset($_POST['subject']) ? trim($_POST['subject']) : 'Hajj Quote';
+        $name      = isset($_POST['name']) ? trim($_POST['name']) : '';
+        $company   = isset($_POST['company']) ? trim($_POST['company']) : '';
+        $office    = isset($_POST['office']) ? trim($_POST['office']) : '';
+        $department = isset($_POST['department']) ? trim($_POST['department']) : '';
+        $message   = isset($_POST['message']) ? trim($_POST['message']) : '';
+    
         $lang = $form_type === 'hajj_quote_form_ar' ? 'AR' : 'EN';
     
         if (empty($email) || empty($phone)) {
@@ -65,11 +71,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     
         $item_name = 'Hajj Quote - ' . $phone;
+    
+        // 🧠 Customize your form field mapping below:
         $column_values = [
-            'email_mkka74q8' => ['email' => $email, 'text' => $email],
-            'short_text_mkkagy8h' => $phone,
-            'short_text_subject' => $subject,
-            'long_text_mkkapyz7' => "Quote request via Hajj Form ($lang)"
+            'email_mkka74q8'       => ['email' => $email, 'text' => $email],
+            'short_text_mkkagy8h'  => $phone,
+            'short_text_subject'   => $subject,
+            'short_text_name'      => $name,
+            'short_text_company'   => $company,
+            'short_text_office'    => $office,
+            'short_text_department'=> $department,
+            'long_text_mkkapyz7'   => "Quote request via Hajj Form ($lang)\n\nMessage:\n$message"
         ];
         } else {
         echo json_encode(['status' => 'error', 'message' => 'Invalid form submission.']);

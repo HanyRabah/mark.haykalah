@@ -196,7 +196,7 @@
 							</div>
 						</div>
 
-						<div class="swiper-slide m-bg-black">
+						<!-- <div class="swiper-slide m-bg-black">
 							<div class="card border-0">
 								<img src="img/hajj/slider/slide-5.jpg" class="card-img-top" alt="Item 1" />
 								<div class="py-3 px-2 text-black m-bg-primary text-start">
@@ -204,7 +204,7 @@
 									<p class="mb-0 small">Lorem Ipsum is simply dummy text of the printing and.</p>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="swiper-slide m-bg-black">
 							<div class="card border-0">
@@ -391,46 +391,66 @@
 				<div class="d-flex justify-content-center">
 					<div class="contact-box-outer">
 						<div class="contact-form-box">
-							<h2 class="fw-bold mb-4 text-center">Request Quote!</h2>
+							<h2 class="fw-bold mb-4 text-center">
+								Download Hajj Catalogue & Request a Quote!
+							</h2>
+		
 							<form action="submit_form.php" method="post" id="hajj-form">
 								<input type="hidden" name="form_type" value="hajj_quote_form" />
-
+		
+								<!-- Name -->
 								<div class="mb-3">
-									<select class="form-select" name="subject" required>
-										<option disabled selected>Select Items</option>
-										<option value="Water-Bottles">Water Bottles</option>
-										<option value="Backpacks">Backpacks</option>
-										<option value="Caps">Caps</option>
-										<option value="Izkar-Rings">Izkar Rings</option>
-										<option value="Qibla-Compasses">Qibla Compasses</option>
-										<option value="Flashlight">Flashlight</option>
-										<option value="Sun-Umbrellas">Sun Umbrellas</option>
-										<option value="Fan">Fan</option>
-										<option value="Prayer Mats">Prayer Mats</option>
-										<option value="towel">Towel</option>
-									</select>
+									<input type="text" name="name" class="form-control" placeholder="Name" required />
 								</div>
-
-								<div class="mb-3"> value=""
+		
+								<!-- Company Name -->
+								<div class="mb-3">
+									<input type="text" name="company" class="form-control" placeholder="Company Name" required />
+								</div>
+		
+								<!-- Email -->
+								<div class="mb-3">
 									<input type="email" name="email" class="form-control" placeholder="Email" required />
 								</div>
-
+		
+								<!-- Phone -->
 								<div class="mb-3">
-									<input type="tel" name="phone" class="form-control" placeholder="Phone number" required />
+									<input type="tel" name="phone" class="form-control" placeholder="Phone Number" required />
 								</div>
-
+		
+								<!-- Office Number -->
 								<div class="mb-3">
-									<textarea name="message" rows="2" class="form-control" placeholder="Message ...."></textarea>
+									<input type="tel" name="office" class="form-control" placeholder="Office Number" />
 								</div>
-
+		
+								<!-- Department -->
+								<div class="mb-3">
+									<select class="form-select" name="department" required>
+										<option disabled selected>Select Department</option>
+										<option value="marketing">Marketing</option>
+										<option value="management">Management</option>
+										<option value="sales">Sales</option>
+										<option value="finance">Finance</option>
+										<option value="others">Others</option>
+									</select>
+								</div>
+		
+								<!-- Message -->
+								<div class="mb-3">
+									<textarea name="message" rows="2" class="form-control" placeholder="Message..."></textarea>
+								</div>
+		
+								<!-- Submit Button -->
 								<button type="submit" class="btn w-100 form-submit-btn">Request Now</button>
 							</form>
+		
 							<div id="hajj-form-response" class="mt-3"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- end hajj contact us section  -->		
 
 		<!-- start footer  -->
 		<footer id="landing-footer" class="footer text-light">
